@@ -9,7 +9,7 @@ export default () => ({
 });
 
 function flow() {
-  let interfacesOutput = '';
+  let interfacesOutput = 'export type StringHack= string';
   for (const item of interfaces) {
     if (interfacesOutput) {
       interfacesOutput += EOL + EOL;
@@ -70,7 +70,7 @@ function flow() {
 }
 
 function typescript() {
-  let interfacesOutput = '';
+  let interfacesOutput = 'export type StringHack=(string & { zz_IGNORE_ME?: never })';
   for (const item of interfaces) {
     if (interfacesOutput) {
       interfacesOutput += EOL + EOL;
@@ -132,12 +132,11 @@ function stringifyTypes(types: DeclarableType | DeclarableType[]) {
   if (!Array.isArray(types)) {
     types = [types];
   }
-
-  return types
+  const res = types
     .map(type => {
       switch (type.type) {
         case Type.String:
-          return 'string';
+          return 'StringHack';
         case Type.Number:
           return 'number';
         case Type.StringLiteral:
@@ -151,6 +150,8 @@ function stringifyTypes(types: DeclarableType | DeclarableType[]) {
       }
     })
     .join(' | ');
+
+  return res === 'StringHack' ? 'string' : res;
 }
 
 function stringifyGenerics(items: IGenerics[] | undefined, ignoreDefault = false) {

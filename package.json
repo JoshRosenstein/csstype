@@ -1,5 +1,5 @@
 {
-  "name": "csstype",
+  "name": "@roseys/csstype",
   "version": "2.6.3",
   "main": "",
   "types": "index.d.ts",
