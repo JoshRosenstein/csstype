@@ -1,4 +1,11 @@
-import { DeclarableType, declarations, IGenerics, interfaces, isAliasProperty } from './declarator';
+import {
+  DeclarableType,
+  declarations,
+  toPropertyDeclarationName,
+  IGenerics,
+  interfaces,
+  isAliasProperty,
+} from './declarator';
 import { Type } from './typer';
 
 const EOL = '\n';
@@ -71,15 +78,18 @@ function flow() {
 
 function typescript() {
   let interfacesOutput = 'export type StringHack=(string & { zz_IGNORE_ME?: never })';
+  let commentMap = {} as { [index: string]: string };
+
   for (const item of interfaces) {
     if (interfacesOutput) {
       interfacesOutput += EOL + EOL;
     }
-
+    let isExtension = false;
     const extendList = item.extends.map(extend => extend.name + stringifyGenerics(extend.generics, true)).join(', ');
     interfacesOutput += 'export interface ' + item.name + stringifyGenerics(item.generics);
 
     if (extendList) {
+      isExtension = true;
       interfacesOutput += ` extends ${extendList}`;
     }
 
@@ -87,11 +97,16 @@ function typescript() {
 
     for (const property of item.properties) {
       if (property.comment) {
+        if (!isExtension && !commentMap[toPropertyDeclarationName(property.name)]) {
+          commentMap[toPropertyDeclarationName(property.name)] = property.comment;
+        }
+
         interfacesOutput += property.comment + EOL;
       }
 
       if (isAliasProperty(property)) {
         const generics = stringifyGenerics(property.generics, true);
+
         interfacesOutput += `${JSON.stringify(property.name)}?: ${
           item.fallback
             ? `${property.alias.name + generics} | ${property.alias.name + generics}[];`
@@ -116,11 +131,14 @@ function typescript() {
       declarationsOutput += EOL + EOL;
     }
 
+    if (commentMap.hasOwnProperty(declaration.name)) {
+      declarationsOutput += commentMap[declaration.name] + EOL;
+    }
     if (declaration.export) {
       declarationsOutput += 'export ';
     }
 
-    declarationsOutput += `type ${declaration.name + stringifyGenerics(declaration.generics, true)} = ${stringifyTypes(
+    declarationsOutput += `type ${declaration.name + stringifyGenerics(declaration.generics)} = ${stringifyTypes(
       declaration.types,
     ) + EOL}`;
   }

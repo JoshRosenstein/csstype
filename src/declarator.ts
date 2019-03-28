@@ -146,7 +146,7 @@ declarations.set(declarableGlobalsAndNumber, globalsAndNumberDeclaration);
 
 export const lengthGeneric: IGenerics = {
   name: 'TLength',
-  defaults: 'string | 0',
+  defaults: 'StringHack | 0',
 };
 
 const standardLonghandPropertiesDefinition: IPropertyAlias[] = [];
@@ -164,7 +164,7 @@ const svgPropertiesHyphenDefinition: IPropertyAlias[] = [];
 
 const PROPERTY = 'Property';
 
-function toPropertyDeclarationName(name: string) {
+export function toPropertyDeclarationName(name: string) {
   return toPascalCase(name) + PROPERTY;
 }
 
@@ -465,7 +465,7 @@ const allPropertiesInterface: Interface = {
   extends: [
     standardPropertiesInterface,
     vendorPropertiesInterface,
-    obsoletePropertiesInterface,
+    //  obsoletePropertiesInterface,
     svgPropertiesInterface,
   ],
   fallback: false,
