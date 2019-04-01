@@ -217,10 +217,6 @@ for (const properties of [htmlProperties, svgProperties]) {
     if (!declaration) {
       if (property.types.length === 0) {
         declaration = globalsDeclaration;
-      } else if (onlyContainsString(property.types)) {
-        declaration = globalsAndStringDeclaration;
-      } else if (onlyContainsNumber(property.types)) {
-        declaration = globalsAndNumberDeclaration;
       } else {
         const declarationName = toPropertyDeclarationName(property.name);
 
