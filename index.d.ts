@@ -1,6 +1,6 @@
 export type StringHack = string & { zz_IGNORE_ME?: never };
 
-export interface StandardLonghandProperties<TLength = StringHack | 0> {
+export interface StandardLonghandProperties<TLength = StringHack | number> {
   /**
    * The CSS **`align-content`** property sets how the browser distributes space between and around content items along the cross-axis of a flexbox container, and the main-axis of a grid container.
    *
@@ -4104,7 +4104,7 @@ The scroll-padding properties define offsets for the optimal viewing region of
   zoom?: ZoomProperty;
 }
 
-export interface StandardShorthandProperties<TLength = StringHack | 0> {
+export interface StandardShorthandProperties<TLength = StringHack | number> {
   /**
    * The `**all**` CSS shorthand property sets all of an element's properties (other than `unicode-bidi` and `direction`) to their initial or inherited values, or to the values specified in another stylesheet origin.
    *
@@ -4594,9 +4594,9 @@ export interface StandardShorthandProperties<TLength = StringHack | 0> {
   transition?: TransitionProperty;
 }
 
-export interface StandardProperties<TLength = StringHack | 0> extends StandardLonghandProperties<TLength>, StandardShorthandProperties<TLength> {}
+export interface StandardProperties<TLength = StringHack | number> extends StandardLonghandProperties<TLength>, StandardShorthandProperties<TLength> {}
 
-export interface VendorLonghandProperties<TLength = StringHack | 0> {
+export interface VendorLonghandProperties<TLength = StringHack | number> {
   /**
    * The **`animation-delay`** CSS property sets when an animation starts. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
    *
@@ -5861,7 +5861,7 @@ export interface VendorLonghandProperties<TLength = StringHack | 0> {
   WebkitWritingMode?: WritingModeProperty;
 }
 
-export interface VendorShorthandProperties<TLength = StringHack | 0> {
+export interface VendorShorthandProperties<TLength = StringHack | number> {
   /** The **`animation`** shorthand CSS property sets an animated transition between styles. It is a shorthand for `animation-name`, `animation-duration`, `animation-timing-function`, `animation-delay`, `animation-iteration-count`, `animation-direction`, `animation-fill-mode`, and `animation-play-state`. */
   MozAnimation?: AnimationProperty;
   /** The **`border-image`** CSS property draws an image in place of an element's `border-style`. */
@@ -5913,9 +5913,9 @@ export interface VendorShorthandProperties<TLength = StringHack | 0> {
   WebkitTransition?: TransitionProperty;
 }
 
-export interface VendorProperties<TLength = StringHack | 0> extends VendorLonghandProperties<TLength>, VendorShorthandProperties<TLength> {}
+export interface VendorProperties<TLength = StringHack | number> extends VendorLonghandProperties<TLength>, VendorShorthandProperties<TLength> {}
 
-export interface ObsoleteProperties<TLength = StringHack | 0> {
+export interface ObsoleteProperties<TLength = StringHack | number> {
   /**
    * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
    *
@@ -6690,7 +6690,7 @@ export interface ObsoleteProperties<TLength = StringHack | 0> {
   WebkitScrollSnapPointsY?: ScrollSnapPointsYProperty;
 }
 
-export interface SvgProperties<TLength = StringHack | 0> {
+export interface SvgProperties<TLength = StringHack | number> {
   alignmentBaseline?: AlignmentBaselineProperty;
   baselineShift?: BaselineShiftProperty<TLength>;
   clip?: ClipProperty;
@@ -6753,9 +6753,9 @@ export interface SvgProperties<TLength = StringHack | 0> {
   writingMode?: WritingModeProperty;
 }
 
-export interface Properties<TLength = StringHack | 0> extends StandardProperties<TLength>, VendorProperties<TLength>, SvgProperties<TLength> {}
+export interface Properties<TLength = StringHack | number> extends StandardProperties<TLength>, VendorProperties<TLength>, SvgProperties<TLength> {}
 
-export interface StandardLonghandPropertiesHyphen<TLength = StringHack | 0> {
+export interface StandardLonghandPropertiesHyphen<TLength = StringHack | number> {
   /**
    * The CSS **`align-content`** property sets how the browser distributes space between and around content items along the cross-axis of a flexbox container, and the main-axis of a grid container.
    *
@@ -10859,7 +10859,7 @@ The scroll-padding properties define offsets for the optimal viewing region of
   zoom?: ZoomProperty;
 }
 
-export interface StandardShorthandPropertiesHyphen<TLength = StringHack | 0> {
+export interface StandardShorthandPropertiesHyphen<TLength = StringHack | number> {
   /**
    * The `**all**` CSS shorthand property sets all of an element's properties (other than `unicode-bidi` and `direction`) to their initial or inherited values, or to the values specified in another stylesheet origin.
    *
@@ -11349,9 +11349,9 @@ export interface StandardShorthandPropertiesHyphen<TLength = StringHack | 0> {
   transition?: TransitionProperty;
 }
 
-export interface StandardPropertiesHyphen<TLength = StringHack | 0> extends StandardLonghandPropertiesHyphen<TLength>, StandardShorthandPropertiesHyphen<TLength> {}
+export interface StandardPropertiesHyphen<TLength = StringHack | number> extends StandardLonghandPropertiesHyphen<TLength>, StandardShorthandPropertiesHyphen<TLength> {}
 
-export interface VendorLonghandPropertiesHyphen<TLength = StringHack | 0> {
+export interface VendorLonghandPropertiesHyphen<TLength = StringHack | number> {
   /**
    * The **`animation-delay`** CSS property sets when an animation starts. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
    *
@@ -12616,7 +12616,7 @@ export interface VendorLonghandPropertiesHyphen<TLength = StringHack | 0> {
   "-webkit-writing-mode"?: WritingModeProperty;
 }
 
-export interface VendorShorthandPropertiesHyphen<TLength = StringHack | 0> {
+export interface VendorShorthandPropertiesHyphen<TLength = StringHack | number> {
   /** The **`animation`** shorthand CSS property sets an animated transition between styles. It is a shorthand for `animation-name`, `animation-duration`, `animation-timing-function`, `animation-delay`, `animation-iteration-count`, `animation-direction`, `animation-fill-mode`, and `animation-play-state`. */
   "-moz-animation"?: AnimationProperty;
   /** The **`border-image`** CSS property draws an image in place of an element's `border-style`. */
@@ -12668,9 +12668,9 @@ export interface VendorShorthandPropertiesHyphen<TLength = StringHack | 0> {
   "-webkit-transition"?: TransitionProperty;
 }
 
-export interface VendorPropertiesHyphen<TLength = StringHack | 0> extends VendorLonghandPropertiesHyphen<TLength>, VendorShorthandPropertiesHyphen<TLength> {}
+export interface VendorPropertiesHyphen<TLength = StringHack | number> extends VendorLonghandPropertiesHyphen<TLength>, VendorShorthandPropertiesHyphen<TLength> {}
 
-export interface ObsoletePropertiesHyphen<TLength = StringHack | 0> {
+export interface ObsoletePropertiesHyphen<TLength = StringHack | number> {
   /**
    * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
    *
@@ -13445,7 +13445,7 @@ export interface ObsoletePropertiesHyphen<TLength = StringHack | 0> {
   "-webkit-scroll-snap-points-y"?: ScrollSnapPointsYProperty;
 }
 
-export interface SvgPropertiesHyphen<TLength = StringHack | 0> {
+export interface SvgPropertiesHyphen<TLength = StringHack | number> {
   "alignment-baseline"?: AlignmentBaselineProperty;
   "baseline-shift"?: BaselineShiftProperty<TLength>;
   clip?: ClipProperty;
@@ -13508,13 +13508,13 @@ export interface SvgPropertiesHyphen<TLength = StringHack | 0> {
   "writing-mode"?: WritingModeProperty;
 }
 
-export interface PropertiesHyphen<TLength = StringHack | 0>
+export interface PropertiesHyphen<TLength = StringHack | number>
   extends StandardPropertiesHyphen<TLength>,
     VendorPropertiesHyphen<TLength>,
     ObsoletePropertiesHyphen<TLength>,
     SvgPropertiesHyphen<TLength> {}
 
-export interface StandardLonghandPropertiesFallback<TLength = StringHack | 0> {
+export interface StandardLonghandPropertiesFallback<TLength = StringHack | number> {
   /**
    * The CSS **`align-content`** property sets how the browser distributes space between and around content items along the cross-axis of a flexbox container, and the main-axis of a grid container.
    *
@@ -17618,7 +17618,7 @@ The scroll-padding properties define offsets for the optimal viewing region of
   zoom?: ZoomProperty | ZoomProperty[];
 }
 
-export interface StandardShorthandPropertiesFallback<TLength = StringHack | 0> {
+export interface StandardShorthandPropertiesFallback<TLength = StringHack | number> {
   /**
    * The `**all**` CSS shorthand property sets all of an element's properties (other than `unicode-bidi` and `direction`) to their initial or inherited values, or to the values specified in another stylesheet origin.
    *
@@ -18108,9 +18108,9 @@ export interface StandardShorthandPropertiesFallback<TLength = StringHack | 0> {
   transition?: TransitionProperty | TransitionProperty[];
 }
 
-export interface StandardPropertiesFallback<TLength = StringHack | 0> extends StandardLonghandPropertiesFallback<TLength>, StandardShorthandPropertiesFallback<TLength> {}
+export interface StandardPropertiesFallback<TLength = StringHack | number> extends StandardLonghandPropertiesFallback<TLength>, StandardShorthandPropertiesFallback<TLength> {}
 
-export interface VendorLonghandPropertiesFallback<TLength = StringHack | 0> {
+export interface VendorLonghandPropertiesFallback<TLength = StringHack | number> {
   /**
    * The **`animation-delay`** CSS property sets when an animation starts. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
    *
@@ -19375,7 +19375,7 @@ export interface VendorLonghandPropertiesFallback<TLength = StringHack | 0> {
   WebkitWritingMode?: WritingModeProperty | WritingModeProperty[];
 }
 
-export interface VendorShorthandPropertiesFallback<TLength = StringHack | 0> {
+export interface VendorShorthandPropertiesFallback<TLength = StringHack | number> {
   /** The **`animation`** shorthand CSS property sets an animated transition between styles. It is a shorthand for `animation-name`, `animation-duration`, `animation-timing-function`, `animation-delay`, `animation-iteration-count`, `animation-direction`, `animation-fill-mode`, and `animation-play-state`. */
   MozAnimation?: AnimationProperty | AnimationProperty[];
   /** The **`border-image`** CSS property draws an image in place of an element's `border-style`. */
@@ -19427,9 +19427,9 @@ export interface VendorShorthandPropertiesFallback<TLength = StringHack | 0> {
   WebkitTransition?: TransitionProperty | TransitionProperty[];
 }
 
-export interface VendorPropertiesFallback<TLength = StringHack | 0> extends VendorLonghandPropertiesFallback<TLength>, VendorShorthandPropertiesFallback<TLength> {}
+export interface VendorPropertiesFallback<TLength = StringHack | number> extends VendorLonghandPropertiesFallback<TLength>, VendorShorthandPropertiesFallback<TLength> {}
 
-export interface ObsoletePropertiesFallback<TLength = StringHack | 0> {
+export interface ObsoletePropertiesFallback<TLength = StringHack | number> {
   /**
    * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
    *
@@ -20204,7 +20204,7 @@ export interface ObsoletePropertiesFallback<TLength = StringHack | 0> {
   WebkitScrollSnapPointsY?: ScrollSnapPointsYProperty | ScrollSnapPointsYProperty[];
 }
 
-export interface SvgPropertiesFallback<TLength = StringHack | 0> {
+export interface SvgPropertiesFallback<TLength = StringHack | number> {
   alignmentBaseline?: AlignmentBaselineProperty | AlignmentBaselineProperty[];
   baselineShift?: BaselineShiftProperty<TLength> | BaselineShiftProperty<TLength>[];
   clip?: ClipProperty | ClipProperty[];
@@ -20267,13 +20267,13 @@ export interface SvgPropertiesFallback<TLength = StringHack | 0> {
   writingMode?: WritingModeProperty | WritingModeProperty[];
 }
 
-export interface PropertiesFallback<TLength = StringHack | 0>
+export interface PropertiesFallback<TLength = StringHack | number>
   extends StandardPropertiesFallback<TLength>,
     VendorPropertiesFallback<TLength>,
     ObsoletePropertiesFallback<TLength>,
     SvgPropertiesFallback<TLength> {}
 
-export interface StandardLonghandPropertiesHyphenFallback<TLength = StringHack | 0> {
+export interface StandardLonghandPropertiesHyphenFallback<TLength = StringHack | number> {
   /**
    * The CSS **`align-content`** property sets how the browser distributes space between and around content items along the cross-axis of a flexbox container, and the main-axis of a grid container.
    *
@@ -24377,7 +24377,7 @@ The scroll-padding properties define offsets for the optimal viewing region of
   zoom?: ZoomProperty | ZoomProperty[];
 }
 
-export interface StandardShorthandPropertiesHyphenFallback<TLength = StringHack | 0> {
+export interface StandardShorthandPropertiesHyphenFallback<TLength = StringHack | number> {
   /**
    * The `**all**` CSS shorthand property sets all of an element's properties (other than `unicode-bidi` and `direction`) to their initial or inherited values, or to the values specified in another stylesheet origin.
    *
@@ -24867,11 +24867,11 @@ export interface StandardShorthandPropertiesHyphenFallback<TLength = StringHack 
   transition?: TransitionProperty | TransitionProperty[];
 }
 
-export interface StandardPropertiesHyphenFallback<TLength = StringHack | 0>
+export interface StandardPropertiesHyphenFallback<TLength = StringHack | number>
   extends StandardLonghandPropertiesHyphenFallback<TLength>,
     StandardShorthandPropertiesHyphenFallback<TLength> {}
 
-export interface VendorLonghandPropertiesHyphenFallback<TLength = StringHack | 0> {
+export interface VendorLonghandPropertiesHyphenFallback<TLength = StringHack | number> {
   /**
    * The **`animation-delay`** CSS property sets when an animation starts. The animation can start later, immediately from its beginning, or immediately and partway through the animation.
    *
@@ -26136,7 +26136,7 @@ export interface VendorLonghandPropertiesHyphenFallback<TLength = StringHack | 0
   "-webkit-writing-mode"?: WritingModeProperty | WritingModeProperty[];
 }
 
-export interface VendorShorthandPropertiesHyphenFallback<TLength = StringHack | 0> {
+export interface VendorShorthandPropertiesHyphenFallback<TLength = StringHack | number> {
   /** The **`animation`** shorthand CSS property sets an animated transition between styles. It is a shorthand for `animation-name`, `animation-duration`, `animation-timing-function`, `animation-delay`, `animation-iteration-count`, `animation-direction`, `animation-fill-mode`, and `animation-play-state`. */
   "-moz-animation"?: AnimationProperty | AnimationProperty[];
   /** The **`border-image`** CSS property draws an image in place of an element's `border-style`. */
@@ -26188,11 +26188,11 @@ export interface VendorShorthandPropertiesHyphenFallback<TLength = StringHack | 
   "-webkit-transition"?: TransitionProperty | TransitionProperty[];
 }
 
-export interface VendorPropertiesHyphenFallback<TLength = StringHack | 0>
+export interface VendorPropertiesHyphenFallback<TLength = StringHack | number>
   extends VendorLonghandPropertiesHyphenFallback<TLength>,
     VendorShorthandPropertiesHyphenFallback<TLength> {}
 
-export interface ObsoletePropertiesHyphenFallback<TLength = StringHack | 0> {
+export interface ObsoletePropertiesHyphenFallback<TLength = StringHack | number> {
   /**
    * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
    *
@@ -26967,7 +26967,7 @@ export interface ObsoletePropertiesHyphenFallback<TLength = StringHack | 0> {
   "-webkit-scroll-snap-points-y"?: ScrollSnapPointsYProperty | ScrollSnapPointsYProperty[];
 }
 
-export interface SvgPropertiesHyphenFallback<TLength = StringHack | 0> {
+export interface SvgPropertiesHyphenFallback<TLength = StringHack | number> {
   "alignment-baseline"?: AlignmentBaselineProperty | AlignmentBaselineProperty[];
   "baseline-shift"?: BaselineShiftProperty<TLength> | BaselineShiftProperty<TLength>[];
   clip?: ClipProperty | ClipProperty[];
@@ -27030,7 +27030,7 @@ export interface SvgPropertiesHyphenFallback<TLength = StringHack | 0> {
   "writing-mode"?: WritingModeProperty | WritingModeProperty[];
 }
 
-export interface PropertiesHyphenFallback<TLength = StringHack | 0>
+export interface PropertiesHyphenFallback<TLength = StringHack | number>
   extends StandardPropertiesHyphenFallback<TLength>,
     VendorPropertiesHyphenFallback<TLength>,
     ObsoletePropertiesHyphenFallback<TLength>,
@@ -27144,27 +27144,27 @@ export interface FontFaceHyphenFallback {
   "unicode-range"?: string | string[];
 }
 
-export interface Page<TLength = StringHack | 0> {
+export interface Page<TLength = StringHack | number> {
   bleed?: PageBleedProperty<TLength>;
   marks?: PageMarksProperty;
 }
 
-export interface PageHyphen<TLength = StringHack | 0> {
+export interface PageHyphen<TLength = StringHack | number> {
   bleed?: PageBleedProperty<TLength>;
   marks?: PageMarksProperty;
 }
 
-export interface PageFallback<TLength = StringHack | 0> {
+export interface PageFallback<TLength = StringHack | number> {
   bleed?: PageBleedProperty<TLength> | PageBleedProperty<TLength>[];
   marks?: PageMarksProperty | PageMarksProperty[];
 }
 
-export interface PageHyphenFallback<TLength = StringHack | 0> {
+export interface PageHyphenFallback<TLength = StringHack | number> {
   bleed?: PageBleedProperty<TLength> | PageBleedProperty<TLength>[];
   marks?: PageMarksProperty | PageMarksProperty[];
 }
 
-export interface Viewport<TLength = StringHack | 0> {
+export interface Viewport<TLength = StringHack | number> {
   msHeight?: ViewportHeightProperty<TLength>;
   msMaxHeight?: ViewportMaxHeightProperty<TLength>;
   msMaxWidth?: ViewportMaxWidthProperty<TLength>;
@@ -27190,7 +27190,7 @@ export interface Viewport<TLength = StringHack | 0> {
   zoom?: ViewportZoomProperty;
 }
 
-export interface ViewportHyphen<TLength = StringHack | 0> {
+export interface ViewportHyphen<TLength = StringHack | number> {
   "-ms-height"?: ViewportHeightProperty<TLength>;
   "-ms-max-height"?: ViewportMaxHeightProperty<TLength>;
   "-ms-max-width"?: ViewportMaxWidthProperty<TLength>;
@@ -27216,7 +27216,7 @@ export interface ViewportHyphen<TLength = StringHack | 0> {
   zoom?: ViewportZoomProperty;
 }
 
-export interface ViewportFallback<TLength = StringHack | 0> {
+export interface ViewportFallback<TLength = StringHack | number> {
   msHeight?: ViewportHeightProperty<TLength> | ViewportHeightProperty<TLength>[];
   msMaxHeight?: ViewportMaxHeightProperty<TLength> | ViewportMaxHeightProperty<TLength>[];
   msMaxWidth?: ViewportMaxWidthProperty<TLength> | ViewportMaxWidthProperty<TLength>[];
@@ -27242,7 +27242,7 @@ export interface ViewportFallback<TLength = StringHack | 0> {
   zoom?: ViewportZoomProperty | ViewportZoomProperty[];
 }
 
-export interface ViewportHyphenFallback<TLength = StringHack | 0> {
+export interface ViewportHyphenFallback<TLength = StringHack | number> {
   "-ms-height"?: ViewportHeightProperty<TLength> | ViewportHeightProperty<TLength>[];
   "-ms-max-height"?: ViewportMaxHeightProperty<TLength> | ViewportMaxHeightProperty<TLength>[];
   "-ms-max-width"?: ViewportMaxWidthProperty<TLength> | ViewportMaxWidthProperty<TLength>[];
@@ -28126,7 +28126,7 @@ export type BackfaceVisibilityProperty = Globals | "hidden" | "visible";
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/background
  */
-export type BackgroundProperty<TLength = StringHack | 0> = Globals | FinalBgLayer<TLength> | StringHack;
+export type BackgroundProperty<TLength = StringHack | number> = Globals | FinalBgLayer<TLength> | StringHack;
 
 /**
  * The **`background-attachment`** CSS property sets whether a background image's position is fixed within the viewport, or scrolls with its containing block.
@@ -28217,7 +28217,7 @@ export type BackgroundOriginProperty = Globals | Box | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/background-position
  */
-export type BackgroundPositionProperty<TLength = StringHack | 0> = Globals | BgPosition<TLength> | StringHack;
+export type BackgroundPositionProperty<TLength = StringHack | number> = Globals | BgPosition<TLength> | StringHack;
 
 /**
  * The **`background-position-x`** CSS property sets the initial horizontal position for each background image. The position is relative to the position layer set by `background-origin`.
@@ -28230,7 +28230,7 @@ export type BackgroundPositionProperty<TLength = StringHack | 0> = Globals | BgP
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/background-position-x
  */
-export type BackgroundPositionXProperty<TLength = StringHack | 0> = Globals | TLength | "center" | "left" | "right" | "x-end" | "x-start" | StringHack;
+export type BackgroundPositionXProperty<TLength = StringHack | number> = Globals | TLength | "center" | "left" | "right" | "x-end" | "x-start" | StringHack;
 
 /**
  * The **`background-position-y`** CSS property sets the initial vertical position, relative to the background position layer defined by `background-origin`, for each defined background image.
@@ -28243,7 +28243,7 @@ export type BackgroundPositionXProperty<TLength = StringHack | 0> = Globals | TL
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/background-position-y
  */
-export type BackgroundPositionYProperty<TLength = StringHack | 0> = Globals | TLength | "bottom" | "center" | "top" | "y-end" | "y-start" | StringHack;
+export type BackgroundPositionYProperty<TLength = StringHack | number> = Globals | TLength | "bottom" | "center" | "top" | "y-end" | "y-start" | StringHack;
 
 /**
  * The **`background-repeat`** CSS property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.
@@ -28270,7 +28270,7 @@ export type BackgroundRepeatProperty = Globals | RepeatStyle | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/background-size
  */
-export type BackgroundSizeProperty<TLength = StringHack | 0> = Globals | BgSize<TLength> | StringHack;
+export type BackgroundSizeProperty<TLength = StringHack | number> = Globals | BgSize<TLength> | StringHack;
 
 /** **Initial value**: `clip` */
 export type BlockOverflowProperty = Globals | "clip" | "ellipsis" | StringHack;
@@ -28286,7 +28286,7 @@ export type BlockOverflowProperty = Globals | "clip" | "ellipsis" | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/block-size
  */
-export type BlockSizeProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | "available" | "fit-content" | "max-content" | "min-content" | StringHack;
+export type BlockSizeProperty<TLength = StringHack | number> = Globals | TLength | "auto" | "available" | "fit-content" | "max-content" | "min-content" | StringHack;
 
 /**
  * The **`border`** CSS property sets an element's border. It's a shorthand for `border-width`, `border-style`, and `border-color`.
@@ -28297,7 +28297,7 @@ export type BlockSizeProperty<TLength = StringHack | 0> = Globals | TLength | "a
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border
  */
-export type BorderProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-block`** CSS property is a shorthand property for setting the individual logical block border property values in a single place in the style sheet.
@@ -28308,7 +28308,7 @@ export type BorderProperty<TLength = StringHack | 0> = Globals | LineWidth<TLeng
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-block
  */
-export type BorderBlockProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderBlockProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-block-color`** CSS property defines the color of the logical block borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color` and `border-bottom-color`, or `border-right-color` and `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -28332,7 +28332,7 @@ export type BorderBlockColorProperty = Globals | Color | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-block-end
  */
-export type BorderBlockEndProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderBlockEndProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-block-end-color`** CSS property defines the color of the logical block-end border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color`, `border-right-color`, `border-bottom-color`, or `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -28371,7 +28371,7 @@ export type BorderBlockEndStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-block-end-width
  */
-export type BorderBlockEndWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderBlockEndWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-block-start`** CSS property is a shorthand property for setting the individual logical block-start border property values in a single place in the style sheet.
@@ -28382,7 +28382,7 @@ export type BorderBlockEndWidthProperty<TLength = StringHack | 0> = Globals | Li
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-block-start
  */
-export type BorderBlockStartProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderBlockStartProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-block-start-color`** CSS property defines the color of the logical block-start border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color`, `border-right-color`, `border-bottom-color`, or `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -28421,7 +28421,7 @@ export type BorderBlockStartStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-block-start-width
  */
-export type BorderBlockStartWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderBlockStartWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-block-style`** CSS property defines the style of the logical block borders of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-style` and `border-bottom-style`, or `border-left-style` and `border-right-style` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -28447,7 +28447,7 @@ export type BorderBlockStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-block-width
  */
-export type BorderBlockWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderBlockWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-bottom`** CSS property is a shorthand that sets the values of `border-bottom-width`, `border-bottom-style` and `border-bottom-color`. These properties set an element's bottom border.
@@ -28458,7 +28458,7 @@ export type BorderBlockWidthProperty<TLength = StringHack | 0> = Globals | LineW
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-bottom
  */
-export type BorderBottomProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderBottomProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-bottom-color`** CSS property sets the color of an element's bottom border. It can also be set with the shorthand CSS properties `border-color` or `border-bottom`.
@@ -28485,7 +28485,7 @@ export type BorderBottomColorProperty = Globals | Color;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-left-radius
  */
-export type BorderBottomLeftRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderBottomLeftRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-bottom-right-radius`** CSS property rounds the bottom-right corner of an element.
@@ -28499,7 +28499,7 @@ export type BorderBottomLeftRadiusProperty<TLength = StringHack | 0> = Globals |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-right-radius
  */
-export type BorderBottomRightRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderBottomRightRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-bottom-style`** CSS property sets the line style of an element's bottom `border`.
@@ -28525,7 +28525,7 @@ export type BorderBottomStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-bottom-width
  */
-export type BorderBottomWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderBottomWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-collapse`** CSS property sets whether cells inside a `<table>` have shared or separate borders.
@@ -28562,7 +28562,7 @@ export type BorderColorProperty = Globals | Color | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-end-end-radius
  */
-export type BorderEndEndRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderEndEndRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-end-start-radius`** CSS property defines a logical border radius on an element, which maps to a physical border radius depending on the element's `writing-mode`, `direction`, and `text-orientation`.
@@ -28575,7 +28575,7 @@ export type BorderEndEndRadiusProperty<TLength = StringHack | 0> = Globals | TLe
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-end-start-radius
  */
-export type BorderEndStartRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderEndStartRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-image`** CSS property draws an image in place of an element's `border-style`.
@@ -28600,7 +28600,7 @@ export type BorderImageProperty = Globals | "none" | "repeat" | "round" | "space
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-image-outset
  */
-export type BorderImageOutsetProperty<TLength = StringHack | 0> = Globals | TLength | StringHack | number;
+export type BorderImageOutsetProperty<TLength = StringHack | number> = Globals | TLength | StringHack | number;
 
 /**
  * The **`border-image-repeat`** CSS property defines how the edge regions of a source image are adjusted to fit the dimensions of an element's border image.
@@ -28652,7 +28652,7 @@ export type BorderImageSourceProperty = Globals | "none" | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-image-width
  */
-export type BorderImageWidthProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack | number;
+export type BorderImageWidthProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack | number;
 
 /**
  * The **`border-inline`** CSS property is a shorthand property for setting the individual logical inline border property values in a single place in the style sheet.
@@ -28663,7 +28663,7 @@ export type BorderImageWidthProperty<TLength = StringHack | 0> = Globals | TLeng
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-inline
  */
-export type BorderInlineProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderInlineProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-inline-color`** CSS property defines the color of the logical inline borders of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color` and `border-bottom-color`, or `border-right-color` and `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -28687,7 +28687,7 @@ export type BorderInlineColorProperty = Globals | Color | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end
  */
-export type BorderInlineEndProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderInlineEndProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-inline-end-color`** CSS property defines the color of the logical inline-end border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color`, `border-right-color`, `border-bottom-color`, or `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -28727,7 +28727,7 @@ export type BorderInlineEndStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-end-width
  */
-export type BorderInlineEndWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderInlineEndWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-inline-start`** CSS property is a shorthand property for setting the individual logical inline-start border property values in a single place in the style sheet.
@@ -28738,7 +28738,7 @@ export type BorderInlineEndWidthProperty<TLength = StringHack | 0> = Globals | L
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start
  */
-export type BorderInlineStartProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderInlineStartProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-inline-start-color`** CSS property defines the color of the logical inline start border of an element, which maps to a physical border color depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-color`, `border-right-color`, `border-bottom-color`, or `border-left-color` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -28778,7 +28778,7 @@ export type BorderInlineStartStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-start-width
  */
-export type BorderInlineStartWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderInlineStartWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-inline-style`** CSS property defines the style of the logical inline borders of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the `border-top-style` and `border-bottom-style`, or `border-left-style` and `border-right-style` properties depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -28804,7 +28804,7 @@ export type BorderInlineStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-inline-width
  */
-export type BorderInlineWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderInlineWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-left`** CSS property is a shorthand that sets the values of `border-left-width`, `border-left-style` and `border-left-color`. These properties set an element's left border.
@@ -28815,7 +28815,7 @@ export type BorderInlineWidthProperty<TLength = StringHack | 0> = Globals | Line
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-left
  */
-export type BorderLeftProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderLeftProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-left-color`** CSS property sets the color of an element's left border. It can also be set with the shorthand CSS properties `border-color` or `border-left`.
@@ -28854,7 +28854,7 @@ export type BorderLeftStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-left-width
  */
-export type BorderLeftWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderLeftWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-radius`** CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
@@ -28866,7 +28866,7 @@ export type BorderLeftWidthProperty<TLength = StringHack | 0> = Globals | LineWi
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-radius
  */
-export type BorderRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-right`** CSS property is a shorthand that sets the values of `border-right-width`, `border-right-style` and `border-right-color`. These properties set an element's right border.
@@ -28877,7 +28877,7 @@ export type BorderRadiusProperty<TLength = StringHack | 0> = Globals | TLength |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-right
  */
-export type BorderRightProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderRightProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-right-color`** CSS property sets the color of an element's right border. It can also be set with the shorthand CSS properties `border-color` or `border-right`.
@@ -28916,7 +28916,7 @@ export type BorderRightStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-right-width
  */
-export type BorderRightWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderRightWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-spacing`** CSS property sets the distance between the borders of adjacent `<table>` cells. This property applies only when `border-collapse` is `separate`.
@@ -28929,7 +28929,7 @@ export type BorderRightWidthProperty<TLength = StringHack | 0> = Globals | LineW
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-spacing
  */
-export type BorderSpacingProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderSpacingProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-start-end-radius`** CSS property defines a logical border radius on an element, which maps to a physical border radius depending on the element's `writing-mode`, `direction`, and `text-orientation`.
@@ -28942,7 +28942,7 @@ export type BorderSpacingProperty<TLength = StringHack | 0> = Globals | TLength 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-start-end-radius
  */
-export type BorderStartEndRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderStartEndRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-start-start-radius`** CSS property defines a logical border radius on an element, which maps to a physical border radius that depends on the element's `writing-mode`, `direction`, and `text-orientation`.
@@ -28955,7 +28955,7 @@ export type BorderStartEndRadiusProperty<TLength = StringHack | 0> = Globals | T
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-start-start-radius
  */
-export type BorderStartStartRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderStartStartRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-style`** CSS property is a shorthand property that sets the line style for all four sides of an element's border.
@@ -28977,7 +28977,7 @@ export type BorderStyleProperty = Globals | LineStyle | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-top
  */
-export type BorderTopProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type BorderTopProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`border-top-color`** CSS property sets the color of an element's top border. It can also be set with the shorthand CSS properties `border-color` or `border-top`.
@@ -29004,7 +29004,7 @@ export type BorderTopColorProperty = Globals | Color;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-top-left-radius
  */
-export type BorderTopLeftRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderTopLeftRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-top-right-radius`** CSS property rounds the top-right corner of an element.
@@ -29018,7 +29018,7 @@ export type BorderTopLeftRadiusProperty<TLength = StringHack | 0> = Globals | TL
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-top-right-radius
  */
-export type BorderTopRightRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type BorderTopRightRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`border-top-style`** CSS property sets the line style of an element's top `border`.
@@ -29044,7 +29044,7 @@ export type BorderTopStyleProperty = Globals | LineStyle;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-top-width
  */
-export type BorderTopWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type BorderTopWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`border-width`** shorthand CSS property sets the widths of all four sides of an element's border.
@@ -29055,7 +29055,7 @@ export type BorderTopWidthProperty<TLength = StringHack | 0> = Globals | LineWid
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/border-width
  */
-export type BorderWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | StringHack;
+export type BorderWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | StringHack;
 
 /**
  * The **`bottom`** CSS property participates in specifying the vertical position of a _positioned element_. It has no effect on non-positioned elements.
@@ -29068,7 +29068,7 @@ export type BorderWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/bottom
  */
-export type BottomProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type BottomProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`box-align`** CSS property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
@@ -29439,7 +29439,7 @@ export type ColumnFillProperty = Globals | "auto" | "balance" | "balance-all";
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/column-gap
  */
-export type ColumnGapProperty<TLength = StringHack | 0> = Globals | TLength | "normal" | StringHack;
+export type ColumnGapProperty<TLength = StringHack | number> = Globals | TLength | "normal" | StringHack;
 
 /**
  * The **`column-rule`** CSS property sets the width, style, and color of the rule (line) drawn between columns in a multi-column layout.
@@ -29451,7 +29451,7 @@ export type ColumnGapProperty<TLength = StringHack | 0> = Globals | TLength | "n
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/column-rule
  */
-export type ColumnRuleProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type ColumnRuleProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /**
  * The **`column-rule-color`** CSS property sets the color of the rule (line) drawn between columns in a multi-column layout.
@@ -29492,7 +29492,7 @@ export type ColumnRuleStyleProperty = Globals | LineStyle | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/column-rule-width
  */
-export type ColumnRuleWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | StringHack;
+export type ColumnRuleWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | StringHack;
 
 /**
  * The **`column-span`** CSS property makes it possible for an element to span across all columns when its value is set to `all`.
@@ -29519,7 +29519,7 @@ export type ColumnSpanProperty = Globals | "all" | "none";
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/column-width
  */
-export type ColumnWidthProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ColumnWidthProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The **`columns`** CSS property sets the column width and column count of an element.
@@ -29531,7 +29531,7 @@ export type ColumnWidthProperty<TLength = StringHack | 0> = Globals | TLength | 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/columns
  */
-export type ColumnsProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack | number;
+export type ColumnsProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack | number;
 
 /**
  * The **`contain`** CSS property allows an author to indicate that an element and its contents are, as much as possible, _independent_ of the rest of the document tree. This allows the browser to recalculate layout, style, paint, size, or any combination of them for a limited area of the DOM and not the entire page.
@@ -29701,7 +29701,7 @@ export type FilterProperty = Globals | "none" | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/flex
  */
-export type FlexProperty<TLength = StringHack | 0> =
+export type FlexProperty<TLength = StringHack | number> =
   | Globals
   | TLength
   | "auto"
@@ -29726,7 +29726,7 @@ export type FlexProperty<TLength = StringHack | 0> =
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/flex-basis
  */
-export type FlexBasisProperty<TLength = StringHack | 0> =
+export type FlexBasisProperty<TLength = StringHack | number> =
   | Globals
   | TLength
   | "-webkit-auto"
@@ -29908,7 +29908,7 @@ export type FontOpticalSizingProperty = Globals | "auto" | "none";
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/font-size
  */
-export type FontSizeProperty<TLength = StringHack | 0> = Globals | AbsoluteSize | TLength | "larger" | "smaller" | StringHack;
+export type FontSizeProperty<TLength = StringHack | number> = Globals | AbsoluteSize | TLength | "larger" | "smaller" | StringHack;
 
 /**
  * The **`font-size-adjust`** CSS property sets how the font size should be chosen based on the height of lowercase rather than capital letters.
@@ -30162,7 +30162,7 @@ export type FontWeightProperty = Globals | FontWeightAbsolute | "bolder" | "ligh
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/gap
  */
-export type GapProperty<TLength = StringHack | 0> = Globals | TLength | "normal" | StringHack;
+export type GapProperty<TLength = StringHack | number> = Globals | TLength | "normal" | StringHack;
 
 /**
  * The **`grid`** CSS property is a shorthand property that sets all of the explicit grid properties (`grid-template-rows`, `grid-template-columns`, and `grid-template-areas`), and all the implicit grid properties (`grid-auto-rows`, `grid-auto-columns`, and `grid-auto-flow`), in a single declaration.
@@ -30198,7 +30198,7 @@ export type GridAreaProperty = Globals | GridLine | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/grid-auto-columns
  */
-export type GridAutoColumnsProperty<TLength = StringHack | 0> = Globals | TrackBreadth<TLength> | StringHack;
+export type GridAutoColumnsProperty<TLength = StringHack | number> = Globals | TrackBreadth<TLength> | StringHack;
 
 /**
  * The **`grid-auto-flow`** CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid.
@@ -30225,7 +30225,7 @@ export type GridAutoFlowProperty = Globals | "column" | "dense" | "row" | String
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/grid-auto-rows
  */
-export type GridAutoRowsProperty<TLength = StringHack | 0> = Globals | TrackBreadth<TLength> | StringHack;
+export type GridAutoRowsProperty<TLength = StringHack | number> = Globals | TrackBreadth<TLength> | StringHack;
 
 /**
  * The **`grid-column`** CSS property is a shorthand property for `grid-column-start` and `grid-column-end` specifying a grid item's size and location within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area.
@@ -30258,7 +30258,7 @@ export type GridColumnEndProperty = Globals | GridLine;
  *
  * @deprecated
  */
-export type GridColumnGapProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type GridColumnGapProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`grid-column-start`** CSS property specifies a grid item’s start position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement. This start position defines the block-start edge of the grid area.
@@ -30278,7 +30278,7 @@ export type GridColumnStartProperty = Globals | GridLine;
  *
  * @deprecated
  */
-export type GridGapProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type GridGapProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`grid-row`** CSS property is a shorthand property for `grid-row-start` and `grid-row-end` specifying a grid item’s size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area.
@@ -30311,7 +30311,7 @@ export type GridRowEndProperty = Globals | GridLine;
  *
  * @deprecated
  */
-export type GridRowGapProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type GridRowGapProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`grid-row-start`** CSS property specifies a grid item’s start position within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start edge of its grid area.
@@ -30361,7 +30361,7 @@ export type GridTemplateAreasProperty = Globals | "none" | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/grid-template-columns
  */
-export type GridTemplateColumnsProperty<TLength = StringHack | 0> = Globals | TrackBreadth<TLength> | "none" | StringHack;
+export type GridTemplateColumnsProperty<TLength = StringHack | number> = Globals | TrackBreadth<TLength> | "none" | StringHack;
 
 /**
  * The **`grid-template-rows`** CSS property defines the line names and track sizing functions of the grid rows.
@@ -30374,7 +30374,7 @@ export type GridTemplateColumnsProperty<TLength = StringHack | 0> = Globals | Tr
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/grid-template-rows
  */
-export type GridTemplateRowsProperty<TLength = StringHack | 0> = Globals | TrackBreadth<TLength> | "none" | StringHack;
+export type GridTemplateRowsProperty<TLength = StringHack | number> = Globals | TrackBreadth<TLength> | "none" | StringHack;
 
 /**
  * The **`hanging-punctuation`** CSS property specifies whether a punctuation mark should hang at the start or end of a line of text. Hanging punctuation may be placed outside the line box.
@@ -30400,7 +30400,7 @@ export type HangingPunctuationProperty = Globals | "allow-end" | "first" | "forc
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/height
  */
-export type HeightProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | "available" | "fit-content" | "max-content" | "min-content" | StringHack;
+export type HeightProperty<TLength = StringHack | number> = Globals | TLength | "auto" | "available" | "fit-content" | "max-content" | "min-content" | StringHack;
 
 /**
  * The **`hyphens`** CSS property specifies how words should be hyphenated when text wraps across multiple lines. You can prevent hyphenation entirely, use hyphenation in manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
@@ -30478,7 +30478,7 @@ export type InitialLetterProperty = Globals | "normal" | StringHack | number;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/inline-size
  */
-export type InlineSizeProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | "available" | "fit-content" | "max-content" | "min-content" | StringHack;
+export type InlineSizeProperty<TLength = StringHack | number> = Globals | TLength | "auto" | "available" | "fit-content" | "max-content" | "min-content" | StringHack;
 
 /**
  * The **`inset-block-end`** CSS property defines the logical block end offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -30491,7 +30491,7 @@ export type InlineSizeProperty<TLength = StringHack | 0> = Globals | TLength | "
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/inset-block-end
  */
-export type InsetBlockEndProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type InsetBlockEndProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`inset-block-start`** CSS property defines the logical block start offset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -30504,7 +30504,7 @@ export type InsetBlockEndProperty<TLength = StringHack | 0> = Globals | TLength 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/inset-block-start
  */
-export type InsetBlockStartProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type InsetBlockStartProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`inset-inline-end`** CSS property defines the logical inline end inset of an element, which maps to a physical inset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -30517,7 +30517,7 @@ export type InsetBlockStartProperty<TLength = StringHack | 0> = Globals | TLengt
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/inset-inline-end
  */
-export type InsetInlineEndProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type InsetInlineEndProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`inset-inline-start`** CSS property defines the logical inline start inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the `top`, `right`, `bottom`, or `left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -30530,7 +30530,7 @@ export type InsetInlineEndProperty<TLength = StringHack | 0> = Globals | TLength
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/inset-inline-start
  */
-export type InsetInlineStartProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type InsetInlineStartProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`isolation`** CSS property determines whether an element must create a new stacking context.
@@ -30638,7 +30638,7 @@ export type JustifySelfProperty = Globals | SelfPosition | "auto" | "baseline" |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/left
  */
-export type LeftProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type LeftProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`letter-spacing`** CSS property sets the spacing behavior between text characters.
@@ -30651,7 +30651,7 @@ export type LeftProperty<TLength = StringHack | 0> = Globals | TLength | "auto" 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/letter-spacing
  */
-export type LetterSpacingProperty<TLength = StringHack | 0> = Globals | TLength | "normal";
+export type LetterSpacingProperty<TLength = StringHack | number> = Globals | TLength | "normal";
 
 /**
  * The **`line-break`** CSS property sets how to break lines of Chinese, Japanese, or Korean (CJK) text when working with punctuation and symbols.
@@ -30681,7 +30681,7 @@ export type LineClampProperty = Globals | "none" | number;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/line-height
  */
-export type LineHeightProperty<TLength = StringHack | 0> = Globals | TLength | "normal" | StringHack | number;
+export type LineHeightProperty<TLength = StringHack | number> = Globals | TLength | "normal" | StringHack | number;
 
 /**
  * The **`line-height-step`** CSS property sets the step unit for line box heights. When the property is set, line box heights are rounded up to the closest multiple of the unit.
@@ -30694,7 +30694,7 @@ export type LineHeightProperty<TLength = StringHack | 0> = Globals | TLength | "
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/line-height-step
  */
-export type LineHeightStepProperty<TLength = StringHack | 0> = Globals | TLength;
+export type LineHeightStepProperty<TLength = StringHack | number> = Globals | TLength;
 
 /**
  * The **`list-style`** CSS property is a shorthand to set list style properties `list-style-type`, `list-style-image`, and `list-style-position`.
@@ -30755,7 +30755,7 @@ export type ListStyleTypeProperty = Globals | "none" | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin
  */
-export type MarginProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-block`** CSS property defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
@@ -30768,7 +30768,7 @@ export type MarginProperty<TLength = StringHack | 0> = Globals | TLength | "auto
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-block
  */
-export type MarginBlockProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginBlockProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-block-end`** CSS property defines the logical block end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
@@ -30781,7 +30781,7 @@ export type MarginBlockProperty<TLength = StringHack | 0> = Globals | TLength | 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-block-end
  */
-export type MarginBlockEndProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginBlockEndProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-block-start`** CSS property defines the logical block start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation.
@@ -30794,7 +30794,7 @@ export type MarginBlockEndProperty<TLength = StringHack | 0> = Globals | TLength
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-block-start
  */
-export type MarginBlockStartProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginBlockStartProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-bottom`** CSS property sets the margin area on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
@@ -30807,7 +30807,7 @@ export type MarginBlockStartProperty<TLength = StringHack | 0> = Globals | TLeng
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-bottom
  */
-export type MarginBottomProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginBottomProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-inline`** CSS property defines the logical inline start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
@@ -30820,7 +30820,7 @@ export type MarginBottomProperty<TLength = StringHack | 0> = Globals | TLength |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-inline
  */
-export type MarginInlineProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginInlineProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-inline-end`** CSS property defines the logical inline end margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. In other words, it corresponds to the `margin-top`, `margin-right`, `margin-bottom` or `margin-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -30834,7 +30834,7 @@ export type MarginInlineProperty<TLength = StringHack | 0> = Globals | TLength |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-inline-end
  */
-export type MarginInlineEndProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginInlineEndProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-inline-start`** CSS property defines the logical inline start margin of an element, which maps to a physical margin depending on the element's writing mode, directionality, and text orientation. It corresponds to the `margin-top`, `margin-right`, `margin-bottom`, or `margin-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -30848,7 +30848,7 @@ export type MarginInlineEndProperty<TLength = StringHack | 0> = Globals | TLengt
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-inline-start
  */
-export type MarginInlineStartProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginInlineStartProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-left`** CSS property sets the margin area on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
@@ -30861,7 +30861,7 @@ export type MarginInlineStartProperty<TLength = StringHack | 0> = Globals | TLen
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-left
  */
-export type MarginLeftProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginLeftProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-right`** CSS property sets the margin area on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
@@ -30874,7 +30874,7 @@ export type MarginLeftProperty<TLength = StringHack | 0> = Globals | TLength | "
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-right
  */
-export type MarginRightProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginRightProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`margin-top`** CSS property sets the margin area on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
@@ -30887,7 +30887,7 @@ export type MarginRightProperty<TLength = StringHack | 0> = Globals | TLength | 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/margin-top
  */
-export type MarginTopProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type MarginTopProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`mask`** CSS property hides an element (partially or fully) by masking or clipping the image at specific points.
@@ -30898,7 +30898,7 @@ export type MarginTopProperty<TLength = StringHack | 0> = Globals | TLength | "a
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/mask
  */
-export type MaskProperty<TLength = StringHack | 0> = Globals | MaskLayer<TLength> | StringHack;
+export type MaskProperty<TLength = StringHack | number> = Globals | MaskLayer<TLength> | StringHack;
 
 /** The **`mask-border`** CSS property lets you create a mask along the edge of an element's border. */
 export type MaskBorderProperty = Globals | "alpha" | "luminance" | "none" | "repeat" | "round" | "space" | "stretch" | StringHack | number;
@@ -30915,7 +30915,7 @@ export type MaskBorderModeProperty = Globals | "alpha" | "luminance";
  *
  * **Initial value**: `0`
  */
-export type MaskBorderOutsetProperty<TLength = StringHack | 0> = Globals | TLength | StringHack | number;
+export type MaskBorderOutsetProperty<TLength = StringHack | number> = Globals | TLength | StringHack | number;
 
 /**
  * The **`mask-border-repeat`** CSS property sets how the edge regions of a source image are adjusted to fit the dimensions of an element's mask border.
@@ -30943,7 +30943,7 @@ export type MaskBorderSourceProperty = Globals | "none" | StringHack;
  *
  * **Initial value**: `auto`
  */
-export type MaskBorderWidthProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack | number;
+export type MaskBorderWidthProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack | number;
 
 /**
  * The **`mask-clip`** CSS property determines the area, which is affected by a mask. The painted content of an element must be restricted to this area.
@@ -31021,7 +31021,7 @@ export type MaskOriginProperty = Globals | GeometryBox | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/mask-position
  */
-export type MaskPositionProperty<TLength = StringHack | 0> = Globals | Position<TLength> | StringHack;
+export type MaskPositionProperty<TLength = StringHack | number> = Globals | Position<TLength> | StringHack;
 
 /**
  * The **`mask-repeat`** CSS property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
@@ -31047,7 +31047,7 @@ export type MaskRepeatProperty = Globals | RepeatStyle | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/mask-size
  */
-export type MaskSizeProperty<TLength = StringHack | 0> = Globals | BgSize<TLength> | StringHack;
+export type MaskSizeProperty<TLength = StringHack | number> = Globals | BgSize<TLength> | StringHack;
 
 /**
  * The **`mask-type`** CSS property sets whether an SVG `<mask>` element is used as a _luminance_ or an _alpha_ mask. It applies to the `<mask>` element itself.
@@ -31073,7 +31073,7 @@ export type MaskTypeProperty = Globals | "alpha" | "luminance";
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/max-block-size
  */
-export type MaxBlockSizeProperty<TLength = StringHack | 0> = Globals | TLength | "fill-available" | "fit-content" | "max-content" | "min-content" | "none" | StringHack;
+export type MaxBlockSizeProperty<TLength = StringHack | number> = Globals | TLength | "fill-available" | "fit-content" | "max-content" | "min-content" | "none" | StringHack;
 
 /**
  * The **`max-height`** CSS property sets the maximum height of an element. It prevents the used value of the `height` property from becoming larger than the value specified for `max-height`.
@@ -31086,7 +31086,7 @@ export type MaxBlockSizeProperty<TLength = StringHack | 0> = Globals | TLength |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/max-height
  */
-export type MaxHeightProperty<TLength = StringHack | 0> = Globals | TLength | "fill-available" | "fit-content" | "max-content" | "min-content" | "none" | StringHack;
+export type MaxHeightProperty<TLength = StringHack | number> = Globals | TLength | "fill-available" | "fit-content" | "max-content" | "min-content" | "none" | StringHack;
 
 /**
  * The **`max-inline-size`** CSS property defines the horizontal or vertical maximum size of an element's block depending on its writing mode. It corresponds to the `max-width` or the `max-height` property depending on the value defined for `writing-mode`. If the writing mode is vertically oriented, the value of `max-inline-size` relates to the maximal height of the element, otherwise it relates to the maximal width of the element. It relates to `max-block-size`, which defines the other dimension of the element.
@@ -31099,7 +31099,7 @@ export type MaxHeightProperty<TLength = StringHack | 0> = Globals | TLength | "f
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/max-inline-size
  */
-export type MaxInlineSizeProperty<TLength = StringHack | 0> = Globals | TLength | "fill-available" | "fit-content" | "max-content" | "min-content" | "none" | StringHack;
+export type MaxInlineSizeProperty<TLength = StringHack | number> = Globals | TLength | "fill-available" | "fit-content" | "max-content" | "min-content" | "none" | StringHack;
 
 /** **Initial value**: `none` */
 export type MaxLinesProperty = Globals | "none" | number;
@@ -31115,7 +31115,7 @@ export type MaxLinesProperty = Globals | "none" | number;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/max-width
  */
-export type MaxWidthProperty<TLength = StringHack | 0> = Globals | TLength | "fill-available" | "fit-content" | "max-content" | "min-content" | "none" | StringHack;
+export type MaxWidthProperty<TLength = StringHack | number> = Globals | TLength | "fill-available" | "fit-content" | "max-content" | "min-content" | "none" | StringHack;
 
 /**
  * The **`min-block-size`** CSS property defines the minimum horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the `min-width` or the `min-height` property, depending on the value of `writing-mode`.
@@ -31128,7 +31128,7 @@ export type MaxWidthProperty<TLength = StringHack | 0> = Globals | TLength | "fi
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/min-block-size
  */
-export type MinBlockSizeProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | "fill-available" | "fit-content" | "max-content" | "min-content" | StringHack;
+export type MinBlockSizeProperty<TLength = StringHack | number> = Globals | TLength | "auto" | "fill-available" | "fit-content" | "max-content" | "min-content" | StringHack;
 
 /**
  * The **`min-height`** CSS property sets the minimum height of an element. It prevents the used value of the `height` property from becoming smaller than the value specified for `min-height`.
@@ -31141,7 +31141,7 @@ export type MinBlockSizeProperty<TLength = StringHack | 0> = Globals | TLength |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/min-height
  */
-export type MinHeightProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | "fill-available" | "fit-content" | "max-content" | "min-content" | StringHack;
+export type MinHeightProperty<TLength = StringHack | number> = Globals | TLength | "auto" | "fill-available" | "fit-content" | "max-content" | "min-content" | StringHack;
 
 /**
  * The **`min-inline-size`** CSS property defines the horizontal or vertical minimal size of an element's block, depending on its writing mode. It corresponds to either the `min-width` or the `min-height` property, depending on the value of `writing-mode`.
@@ -31154,7 +31154,7 @@ export type MinHeightProperty<TLength = StringHack | 0> = Globals | TLength | "a
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/min-inline-size
  */
-export type MinInlineSizeProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | "fill-available" | "fit-content" | "max-content" | "min-content" | StringHack;
+export type MinInlineSizeProperty<TLength = StringHack | number> = Globals | TLength | "auto" | "fill-available" | "fit-content" | "max-content" | "min-content" | StringHack;
 
 /**
  * The **`min-width`** CSS property sets the minimum width of an element. It prevents the used value of the `width` property from becoming smaller than the value specified for `min-width`.
@@ -31167,7 +31167,7 @@ export type MinInlineSizeProperty<TLength = StringHack | 0> = Globals | TLength 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/min-width
  */
-export type MinWidthProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | "fill-available" | "fit-content" | "max-content" | "min-content" | StringHack;
+export type MinWidthProperty<TLength = StringHack | number> = Globals | TLength | "auto" | "fill-available" | "fit-content" | "max-content" | "min-content" | StringHack;
 
 /**
  * The **`mix-blend-mode`** CSS property sets how an element's content should blend with the content of the element's parent and the element's background.
@@ -31192,7 +31192,7 @@ export type MixBlendModeProperty = Globals | BlendMode;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/offset
  */
-export type OffsetProperty<TLength = StringHack | 0> = Globals | Position<TLength> | GeometryBox | "auto" | "none" | StringHack;
+export type OffsetProperty<TLength = StringHack | number> = Globals | Position<TLength> | GeometryBox | "auto" | "none" | StringHack;
 
 /**
  * The **`offset-distance`** CSS property specifies a position along an `offset-path`.
@@ -31206,7 +31206,7 @@ export type OffsetProperty<TLength = StringHack | 0> = Globals | Position<TLengt
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/offset-distance
  */
-export type OffsetDistanceProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type OffsetDistanceProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`offset-path`** CSS property specifies a motion path for an element to follow and defines the element's positioning within the parent container or SVG coordinate system.
@@ -31260,13 +31260,13 @@ export type ObjectFitProperty = Globals | "contain" | "cover" | "fill" | "none" 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/object-position
  */
-export type ObjectPositionProperty<TLength = StringHack | 0> = Globals | Position<TLength>;
+export type ObjectPositionProperty<TLength = StringHack | number> = Globals | Position<TLength>;
 
 /** **Initial value**: `auto` */
-export type OffsetAnchorProperty<TLength = StringHack | 0> = Globals | Position<TLength> | "auto";
+export type OffsetAnchorProperty<TLength = StringHack | number> = Globals | Position<TLength> | "auto";
 
 /** **Initial value**: `auto` */
-export type OffsetPositionProperty<TLength = StringHack | 0> = Globals | Position<TLength> | "auto";
+export type OffsetPositionProperty<TLength = StringHack | number> = Globals | Position<TLength> | "auto";
 
 /**
  * The **`opacity`** CSS property sets the transparency of an element or the degree to which content behind an element is visible.
@@ -31317,7 +31317,7 @@ export type OrphansProperty = Globals | number;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/outline
  */
-export type OutlineProperty<TLength = StringHack | 0> = Globals | Color | LineStyle | LineWidth<TLength> | "auto" | "invert" | StringHack;
+export type OutlineProperty<TLength = StringHack | number> = Globals | Color | LineStyle | LineWidth<TLength> | "auto" | "invert" | StringHack;
 
 /**
  * The **`outline-color`** CSS property sets the color of an element's outline.
@@ -31343,7 +31343,7 @@ export type OutlineColorProperty = Globals | Color | "invert";
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/outline-offset
  */
-export type OutlineOffsetProperty<TLength = StringHack | 0> = Globals | TLength;
+export type OutlineOffsetProperty<TLength = StringHack | number> = Globals | TLength;
 
 /**
  * The **`outline-style`** CSS property sets the style of an element's outline. An outline is a line that is drawn around an element, outside the `border`.
@@ -31369,7 +31369,7 @@ export type OutlineStyleProperty = Globals | LineStyle | "auto" | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/outline-width
  */
-export type OutlineWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength>;
+export type OutlineWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength>;
 
 /**
  * The **`overflow`** CSS property sets what to do when an element's content is too big to fit in its block formatting context. It is a shorthand for `overflow-x` and `overflow-y`.
@@ -31502,7 +31502,7 @@ export type OverscrollBehaviorYProperty = Globals | "auto" | "contain" | "none";
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding
  */
-export type PaddingProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-block`** CSS property defines the logical block start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
@@ -31515,7 +31515,7 @@ export type PaddingProperty<TLength = StringHack | 0> = Globals | TLength | Stri
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-block
  */
-export type PaddingBlockProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingBlockProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-block-end`** CSS property defines the logical block end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -31528,7 +31528,7 @@ export type PaddingBlockProperty<TLength = StringHack | 0> = Globals | TLength |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-block-end
  */
-export type PaddingBlockEndProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingBlockEndProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-block-start`** CSS property defines the logical block start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -31541,7 +31541,7 @@ export type PaddingBlockEndProperty<TLength = StringHack | 0> = Globals | TLengt
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-block-start
  */
-export type PaddingBlockStartProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingBlockStartProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-bottom`** CSS property sets the height of the padding area on the bottom of an element.
@@ -31554,7 +31554,7 @@ export type PaddingBlockStartProperty<TLength = StringHack | 0> = Globals | TLen
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-bottom
  */
-export type PaddingBottomProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingBottomProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-inline`** CSS property defines the logical inline start and end padding of an element, which maps to physical padding properties depending on the element's writing mode, directionality, and text orientation.
@@ -31567,7 +31567,7 @@ export type PaddingBottomProperty<TLength = StringHack | 0> = Globals | TLength 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-inline
  */
-export type PaddingInlineProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingInlineProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-inline-end`** CSS property defines the logical inline end padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -31581,7 +31581,7 @@ export type PaddingInlineProperty<TLength = StringHack | 0> = Globals | TLength 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-inline-end
  */
-export type PaddingInlineEndProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingInlineEndProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-inline-start`** CSS property defines the logical inline start padding of an element, which maps to a physical padding depending on the element's writing mode, directionality, and text orientation. It corresponds to the `padding-top`, `padding-right`, `padding-bottom`, or `padding-left` property depending on the values defined for `writing-mode`, `direction`, and `text-orientation`.
@@ -31595,7 +31595,7 @@ export type PaddingInlineEndProperty<TLength = StringHack | 0> = Globals | TLeng
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-inline-start
  */
-export type PaddingInlineStartProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingInlineStartProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-left`** CSS property sets the width of the padding area on the left side of an element.
@@ -31608,7 +31608,7 @@ export type PaddingInlineStartProperty<TLength = StringHack | 0> = Globals | TLe
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-left
  */
-export type PaddingLeftProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingLeftProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-right`** CSS property sets the width of the padding area on the right side of an element.
@@ -31621,7 +31621,7 @@ export type PaddingLeftProperty<TLength = StringHack | 0> = Globals | TLength | 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-right
  */
-export type PaddingRightProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingRightProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`padding-top`** padding area on the top of an element.
@@ -31634,7 +31634,7 @@ export type PaddingRightProperty<TLength = StringHack | 0> = Globals | TLength |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/padding-top
  */
-export type PaddingTopProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type PaddingTopProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`page-break-after`** CSS property adjusts page breaks _after_ the current element.
@@ -31700,7 +31700,7 @@ export type PaintOrderProperty = Globals | "fill" | "markers" | "normal" | "stro
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/perspective
  */
-export type PerspectiveProperty<TLength = StringHack | 0> = Globals | TLength | "none";
+export type PerspectiveProperty<TLength = StringHack | number> = Globals | TLength | "none";
 
 /**
  * The **`perspective-origin`** CSS property determines the position at which the viewer is looking. It is used as the _vanishing point_ by the `perspective` property.
@@ -31714,7 +31714,7 @@ export type PerspectiveProperty<TLength = StringHack | 0> = Globals | TLength | 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/perspective-origin
  */
-export type PerspectiveOriginProperty<TLength = StringHack | 0> = Globals | Position<TLength>;
+export type PerspectiveOriginProperty<TLength = StringHack | number> = Globals | Position<TLength>;
 
 /**
  * The `**place-content**` CSS property is a shorthand for `align-content` and `justify-content`. It can be used in any layout method which utilizes both of these alignment values.
@@ -31864,7 +31864,7 @@ export type ResizeProperty = Globals | "block" | "both" | "horizontal" | "inline
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/right
  */
-export type RightProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type RightProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`rotate`** CSS property allows you to specify rotation transforms individually and independantly of the `transform` property. This maps better to typical user interface usage, and saves having to remember the exact order of transform functions to specify in the `transform` value.
@@ -31905,7 +31905,7 @@ export type RotateProperty = Globals | "none" | StringHack;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/row-gap
  */
-export type RowGapProperty<TLength = StringHack | 0> = Globals | TLength | "normal" | StringHack;
+export type RowGapProperty<TLength = StringHack | number> = Globals | TLength | "normal" | StringHack;
 
 /**
  * The `**ruby-align**` CSS property defines the distribution of the different ruby elements over the base.
@@ -31973,7 +31973,7 @@ export type ScrollBehaviorProperty = Globals | "auto" | "smooth";
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin
  */
-export type ScrollMarginProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollMarginProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-margin-block` property is a shorthand property which sets the scroll-margin longhands in the block dimension.
@@ -31986,7 +31986,7 @@ export type ScrollMarginProperty<TLength = StringHack | 0> = Globals | TLength |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block
  */
-export type ScrollMarginBlockProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollMarginBlockProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-margin-block-end` property defines the margin of the scroll snap area at the end of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
@@ -31999,7 +31999,7 @@ export type ScrollMarginBlockProperty<TLength = StringHack | 0> = Globals | TLen
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block-end
  */
-export type ScrollMarginBlockEndProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ScrollMarginBlockEndProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The `scroll-margin-block-start` property defines the margin of the scroll snap area at the start of the block dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
@@ -32012,7 +32012,7 @@ export type ScrollMarginBlockEndProperty<TLength = StringHack | 0> = Globals | T
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-block-start
  */
-export type ScrollMarginBlockStartProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ScrollMarginBlockStartProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The `scroll-margin-bottom` property defines the bottom margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
@@ -32025,7 +32025,7 @@ export type ScrollMarginBlockStartProperty<TLength = StringHack | 0> = Globals |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-bottom
  */
-export type ScrollMarginBottomProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ScrollMarginBottomProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The `scroll-margin-inline-end` property defines the margin of the scroll snap area at the end of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
@@ -32038,7 +32038,7 @@ export type ScrollMarginBottomProperty<TLength = StringHack | 0> = Globals | TLe
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-inline-end
  */
-export type ScrollMarginInlineEndProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ScrollMarginInlineEndProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The `scroll-margin-inline-start` property defines the margin of the scroll snap area at the start of the inline dimension that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
@@ -32051,7 +32051,7 @@ export type ScrollMarginInlineEndProperty<TLength = StringHack | 0> = Globals | 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-inline-start
  */
-export type ScrollMarginInlineStartProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ScrollMarginInlineStartProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The `scroll-margin-left` property defines the left margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
@@ -32064,7 +32064,7 @@ export type ScrollMarginInlineStartProperty<TLength = StringHack | 0> = Globals 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-left
  */
-export type ScrollMarginLeftProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ScrollMarginLeftProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The `scroll-margin-right` property defines the right margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
@@ -32077,7 +32077,7 @@ export type ScrollMarginLeftProperty<TLength = StringHack | 0> = Globals | TLeng
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-right
  */
-export type ScrollMarginRightProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ScrollMarginRightProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The `scroll-margin-top` property defines the top margin of the scroll snap area that is used for snapping this box to the snapport. The scroll snap area is determined by taking the transformed border box, finding its rectangular bounding box (axis-aligned in the scroll container’s coordinate space), then adding the specified outsets.
@@ -32090,7 +32090,7 @@ export type ScrollMarginRightProperty<TLength = StringHack | 0> = Globals | TLen
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-margin-top
  */
-export type ScrollMarginTopProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type ScrollMarginTopProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The scroll-padding property is a shorthand property which sets all of the scroll-padding longhands, assigning values much like the padding property does for the padding-\* longhands.  
@@ -32105,7 +32105,7 @@ The scroll-padding properties define offsets for the optimal viewing region of
  * 
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding
  */
-export type ScrollPaddingProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-padding-block` property is a shorthand property which sets the scroll-padding longhands for the block dimension.  
@@ -32120,7 +32120,7 @@ The scroll-padding properties define offsets for the optimal viewing region of
  * 
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-block
  */
-export type ScrollPaddingBlockProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type ScrollPaddingBlockProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The `scroll-padding-block-end` property defines offsets for the end edge in the block dimension of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
@@ -32133,7 +32133,7 @@ export type ScrollPaddingBlockProperty<TLength = StringHack | 0> = Globals | TLe
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-block-end
  */
-export type ScrollPaddingBlockEndProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingBlockEndProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-padding-block-start` property defines offsets for the start edge in the block dimension of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
@@ -32146,7 +32146,7 @@ export type ScrollPaddingBlockEndProperty<TLength = StringHack | 0> = Globals | 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-block-start
  */
-export type ScrollPaddingBlockStartProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingBlockStartProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-padding-bottom` property defines offsets for the bottom of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
@@ -32159,7 +32159,7 @@ export type ScrollPaddingBlockStartProperty<TLength = StringHack | 0> = Globals 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-bottom
  */
-export type ScrollPaddingBottomProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingBottomProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-padding-inline` property is a shorthand property which sets the scroll-padding longhands for the inline dimension.  
@@ -32174,7 +32174,7 @@ The scroll-padding properties define offsets for the optimal viewing region of
  * 
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-inline
  */
-export type ScrollPaddingInlineProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type ScrollPaddingInlineProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The `scroll-padding-inline-end` property defines offsets for the end edge in the inline dimension of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
@@ -32187,7 +32187,7 @@ export type ScrollPaddingInlineProperty<TLength = StringHack | 0> = Globals | TL
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-inline-end
  */
-export type ScrollPaddingInlineEndProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingInlineEndProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-padding-inline-start` property defines offsets for the start edge in the inline dimension of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
@@ -32200,7 +32200,7 @@ export type ScrollPaddingInlineEndProperty<TLength = StringHack | 0> = Globals |
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-inline-start
  */
-export type ScrollPaddingInlineStartProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingInlineStartProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-padding-left` property defines offsets for the left of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
@@ -32213,7 +32213,7 @@ export type ScrollPaddingInlineStartProperty<TLength = StringHack | 0> = Globals
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-left
  */
-export type ScrollPaddingLeftProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingLeftProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-padding-right` property defines offsets for the right of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
@@ -32226,7 +32226,7 @@ export type ScrollPaddingLeftProperty<TLength = StringHack | 0> = Globals | TLen
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-right
  */
-export type ScrollPaddingRightProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingRightProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-padding-top` property defines offsets for the top of the optimal viewing region of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or simply to put more breathing room between a targetted element and the edges of the scrollport.
@@ -32239,7 +32239,7 @@ export type ScrollPaddingRightProperty<TLength = StringHack | 0> = Globals | TLe
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/scroll-padding-top
  */
-export type ScrollPaddingTopProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type ScrollPaddingTopProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The `scroll-snap-align` property specifies the box’s snap position as an alignment of its snap area (as the alignment subject) within its snap container’s snapport (as the alignment container). The two values specify the snapping alignment in the block axis and inline axis, respectively. If only one value is specified, the second value defaults to the same value.
@@ -32261,7 +32261,7 @@ export type ScrollSnapAlignProperty = Globals | "center" | "end" | "none" | "sta
  *
  * @deprecated
  */
-export type ScrollSnapCoordinateProperty<TLength = StringHack | 0> = Globals | Position<TLength> | "none" | StringHack;
+export type ScrollSnapCoordinateProperty<TLength = StringHack | number> = Globals | Position<TLength> | "none" | StringHack;
 
 /**
  * The **`scroll-snap-destination`** CSS property defines the position in x and y coordinates within the scroll container's visual viewport which element snap points align with.
@@ -32270,7 +32270,7 @@ export type ScrollSnapCoordinateProperty<TLength = StringHack | 0> = Globals | P
  *
  * @deprecated
  */
-export type ScrollSnapDestinationProperty<TLength = StringHack | 0> = Globals | Position<TLength>;
+export type ScrollSnapDestinationProperty<TLength = StringHack | number> = Globals | Position<TLength>;
 
 /**
  * The **`scroll-snap-points-x`** CSS property defines the horizontal positioning of snap points within the content of the scroll container they are applied to.
@@ -32372,7 +32372,7 @@ export type ShapeImageThresholdProperty = Globals | number;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/shape-margin
  */
-export type ShapeMarginProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type ShapeMarginProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`shape-outside`** CSS property defines a shape—which may be non-rectangular—around which adjacent inline content should wrap. By default, inline content wraps around its margin box; `shape-outside` provides a way to customize this wrapping, making it possible to wrap text around complex objects rather than simple boxes.
@@ -32398,7 +32398,7 @@ export type ShapeOutsideProperty = Globals | Box | "margin-box" | "none" | Strin
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/tab-size
  */
-export type TabSizeProperty<TLength = StringHack | 0> = Globals | TLength | number;
+export type TabSizeProperty<TLength = StringHack | number> = Globals | TLength | number;
 
 /**
  * The **`table-layout`** CSS property sets the algorithm used to lay out `<table>` cells, rows, and columns.
@@ -32602,7 +32602,7 @@ export type TextEmphasisStyleProperty = Globals | "circle" | "dot" | "double-cir
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/text-indent
  */
-export type TextIndentProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type TextIndentProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`text-justify`** CSS property sets what type of justification should be applied to text when `text-align``: justify;` is set on an element.
@@ -32719,7 +32719,7 @@ export type TextUnderlinePositionProperty = Globals | "auto" | "left" | "right" 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/top
  */
-export type TopProperty<TLength = StringHack | 0> = Globals | TLength | "auto" | StringHack;
+export type TopProperty<TLength = StringHack | number> = Globals | TLength | "auto" | StringHack;
 
 /**
  * The **`touch-action`** CSS property sets how a region can be manipulated by a touchscreen user (for example, by zooming features built into the browser).
@@ -32788,7 +32788,7 @@ export type TransformBoxProperty = Globals | "border-box" | "fill-box" | "view-b
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/transform-origin
  */
-export type TransformOriginProperty<TLength = StringHack | 0> = Globals | TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
+export type TransformOriginProperty<TLength = StringHack | number> = Globals | TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
 
 /**
  * The **`transform-style`** CSS property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
@@ -32883,7 +32883,7 @@ export type TransitionTimingFunctionProperty = Globals | SingleTimingFunction | 
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/translate
  */
-export type TranslateProperty<TLength = StringHack | 0> = Globals | TLength | "none" | StringHack;
+export type TranslateProperty<TLength = StringHack | number> = Globals | TLength | "none" | StringHack;
 
 /**
  * The **`unicode-bidi`** CSS property, together with the `direction` property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The `unicode-bidi` property overrides this algorithm and allows the developer to control the text embedding.
@@ -32934,7 +32934,7 @@ export type UserSelectProperty = Globals | "-moz-none" | "all" | "auto" | "conta
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/vertical-align
  */
-export type VerticalAlignProperty<TLength = StringHack | 0> =
+export type VerticalAlignProperty<TLength = StringHack | number> =
   | Globals
   | TLength
   | "baseline"
@@ -32997,7 +32997,7 @@ export type WidowsProperty = Globals | number;
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/width
  */
-export type WidthProperty<TLength = StringHack | 0> =
+export type WidthProperty<TLength = StringHack | number> =
   | Globals
   | TLength
   | "-moz-fit-content"
@@ -33053,7 +33053,7 @@ export type WordBreakProperty = Globals | "break-all" | "break-word" | "keep-all
  *
  * @see https://developer.mozilla.org/docs/Web/CSS/word-spacing
  */
-export type WordSpacingProperty<TLength = StringHack | 0> = Globals | TLength | "normal" | StringHack;
+export type WordSpacingProperty<TLength = StringHack | number> = Globals | TLength | "normal" | StringHack;
 
 /**
  * The `**overflow-wrap**` CSS property sets whether the browser should insert line breaks within words to prevent text from overflowing its content box.
@@ -33302,35 +33302,35 @@ export type MozOrientProperty = Globals | "block" | "horizontal" | "inline" | "v
  *
  * @deprecated
  */
-export type MozOutlineRadiusProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type MozOutlineRadiusProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * In Mozilla applications, the **`-moz-outline-radius-bottomleft`** CSS property can be used to round the bottom-left corner of an element's `outline`.
  *
  * **Initial value**: `0`
  */
-export type MozOutlineRadiusBottomleftProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type MozOutlineRadiusBottomleftProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * In Mozilla applications, the **`-moz-outline-radius-bottomright`** CSS property can be used to round the bottom-right corner of an element's `outline`.
  *
  * **Initial value**: `0`
  */
-export type MozOutlineRadiusBottomrightProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type MozOutlineRadiusBottomrightProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * In Mozilla applications, the **`-moz-outline-radius-topleft`** CSS property can be used to round the top-left corner of an element's `outline`.
  *
  * **Initial value**: `0`
  */
-export type MozOutlineRadiusTopleftProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type MozOutlineRadiusTopleftProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * In Mozilla applications, the **`-moz-outline-radius-topright`** CSS property can be used to round the top-right corner of an element's `outline`.
  *
  * **Initial value**: `0`
  */
-export type MozOutlineRadiusToprightProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type MozOutlineRadiusToprightProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * **`-moz-stack-sizing`** is an extended CSS property. Normally, a `stack` will change its size so that all of its child elements are completely visible. For example, moving a child of the stack far to the right will widen the stack so the child remains visible.
@@ -33494,7 +33494,7 @@ export type MsHyphenateLimitLinesProperty = Globals | "no-limit" | number;
  *
  * **Initial value**: `0`
  */
-export type MsHyphenateLimitZoneProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type MsHyphenateLimitZoneProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 /**
  * The **`-ms-ime-align`** CSS property is a Microsoft extension aligning the Input Method Editor (IME) candidate window box relative to the element on which the IME composition is active. The extension is implemented in Microsoft Edge and Internet Explorer 11.
@@ -33525,28 +33525,28 @@ export type MsScrollLimitProperty = Globals | StringHack;
  *
  * **Initial value**: `auto`
  */
-export type MsScrollLimitXMaxProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type MsScrollLimitXMaxProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The **`-ms-scroll-limit-x-min`** CSS property is a Microsoft extension that specifies the minimum value for the `Element.scrollLeft` property.
  *
  * **Initial value**: `0`
  */
-export type MsScrollLimitXMinProperty<TLength = StringHack | 0> = Globals | TLength;
+export type MsScrollLimitXMinProperty<TLength = StringHack | number> = Globals | TLength;
 
 /**
  * The **`-ms-scroll-limit-y-max`** CSS property is a Microsoft extension that specifies the maximum value for the `Element.scrollTop` property.
  *
  * **Initial value**: `auto`
  */
-export type MsScrollLimitYMaxProperty<TLength = StringHack | 0> = Globals | TLength | "auto";
+export type MsScrollLimitYMaxProperty<TLength = StringHack | number> = Globals | TLength | "auto";
 
 /**
  * The **`-ms-scroll-limit-y-min`** CSS property is a Microsoft extension that specifies the minimum value for the `Element.scrollTop` property.
  *
  * **Initial value**: `0`
  */
-export type MsScrollLimitYMinProperty<TLength = StringHack | 0> = Globals | TLength;
+export type MsScrollLimitYMinProperty<TLength = StringHack | number> = Globals | TLength;
 
 /**
  * The **`-ms-scroll-rails`** CSS property is a Microsoft extension that specifies whether scrolling locks to the primary axis of motion.
@@ -33694,7 +33694,7 @@ export type MsWrapFlowProperty = Globals | "auto" | "both" | "clear" | "end" | "
  *
  * **Initial value**: `0`
  */
-export type MsWrapMarginProperty<TLength = StringHack | 0> = Globals | TLength;
+export type MsWrapMarginProperty<TLength = StringHack | number> = Globals | TLength;
 
 /**
  * The **`-ms-wrap-through`** CSS property is a Microsoft extension that specifies how content should wrap around an exclusion element.
@@ -33760,7 +33760,7 @@ export type WebkitAppearanceProperty =
   | "textfield";
 
 /** The **`-webkit-border-before`** CSS property is a shorthand property for setting the individual logical block start border property values in a single place in the style sheet. */
-export type WebkitBorderBeforeProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
+export type WebkitBorderBeforeProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | LineStyle | Color | StringHack;
 
 /** **Initial value**: `currentcolor` */
 export type WebkitBorderBeforeColorProperty = Globals | Color;
@@ -33769,19 +33769,19 @@ export type WebkitBorderBeforeColorProperty = Globals | Color;
 export type WebkitBorderBeforeStyleProperty = Globals | LineStyle | StringHack;
 
 /** **Initial value**: `medium` */
-export type WebkitBorderBeforeWidthProperty<TLength = StringHack | 0> = Globals | LineWidth<TLength> | StringHack;
+export type WebkitBorderBeforeWidthProperty<TLength = StringHack | number> = Globals | LineWidth<TLength> | StringHack;
 
 /**
  * The **`-webkit-box-reflect`** CSS property lets you reflect the content of an element in one specific direction.
  *
  * **Initial value**: `none`
  */
-export type WebkitBoxReflectProperty<TLength = StringHack | 0> = Globals | TLength | "above" | "below" | "left" | "right" | StringHack;
+export type WebkitBoxReflectProperty<TLength = StringHack | number> = Globals | TLength | "above" | "below" | "left" | "right" | StringHack;
 
 export type WebkitLineClampProperty = Globals | "none" | number;
 
 /** The **`mask`** CSS property hides an element (partially or fully) by masking or clipping the image at specific points. */
-export type WebkitMaskProperty<TLength = StringHack | 0> = Globals | Position<TLength> | RepeatStyle | Box | "border" | "content" | "none" | "padding" | "text" | StringHack;
+export type WebkitMaskProperty<TLength = StringHack | number> = Globals | Position<TLength> | RepeatStyle | Box | "border" | "content" | "none" | "padding" | "text" | StringHack;
 
 /**
  * If a `-webkit-mask-image` is specified, `-webkit-mask-attachment` determines whether the mask image's position is fixed within the viewport, or scrolls along with its containing block.
@@ -33823,21 +33823,21 @@ export type WebkitMaskOriginProperty = Globals | Box | "border" | "content" | "p
  *
  * **Initial value**: `0% 0%`
  */
-export type WebkitMaskPositionProperty<TLength = StringHack | 0> = Globals | Position<TLength> | StringHack;
+export type WebkitMaskPositionProperty<TLength = StringHack | number> = Globals | Position<TLength> | StringHack;
 
 /**
  * The `-webkit-mask-position-x` CSS property sets the initial horizontal position of a mask image.
  *
  * **Initial value**: `0%`
  */
-export type WebkitMaskPositionXProperty<TLength = StringHack | 0> = Globals | TLength | "center" | "left" | "right" | StringHack;
+export type WebkitMaskPositionXProperty<TLength = StringHack | number> = Globals | TLength | "center" | "left" | "right" | StringHack;
 
 /**
  * The `-webkit-mask-position-y` CSS property sets the initial vertical position of a mask image.
  *
  * **Initial value**: `0%`
  */
-export type WebkitMaskPositionYProperty<TLength = StringHack | 0> = Globals | TLength | "bottom" | "center" | "top" | StringHack;
+export type WebkitMaskPositionYProperty<TLength = StringHack | number> = Globals | TLength | "bottom" | "center" | "top" | StringHack;
 
 /**
  * The **`mask-repeat`** CSS property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
@@ -33865,7 +33865,7 @@ export type WebkitMaskRepeatYProperty = Globals | "no-repeat" | "repeat" | "roun
  *
  * **Initial value**: `auto auto`
  */
-export type WebkitMaskSizeProperty<TLength = StringHack | 0> = Globals | BgSize<TLength> | StringHack;
+export type WebkitMaskSizeProperty<TLength = StringHack | number> = Globals | BgSize<TLength> | StringHack;
 
 /**
  * The `-webkit-overflow-scrolling` CSS property controls whether or not touch devices use momentum-based scrolling for a given element.
@@ -33889,7 +33889,7 @@ export type WebkitTapHighlightColorProperty = Globals | Color;
 export type WebkitTextFillColorProperty = Globals | Color;
 
 /** The **`-webkit-text-stroke`** CSS property specifies the width and color of strokes for text characters. This is a shorthand property for the longhand properties `-webkit-text-stroke-width` and `-webkit-text-stroke-color`. */
-export type WebkitTextStrokeProperty<TLength = StringHack | 0> = Globals | Color | TLength | StringHack;
+export type WebkitTextStrokeProperty<TLength = StringHack | number> = Globals | Color | TLength | StringHack;
 
 /**
  * The **`-webkit-text-stroke-color`** CSS property specifies the stroke color of characters of text. If this property is not set, the value of the `color` property is used.
@@ -33903,7 +33903,7 @@ export type WebkitTextStrokeColorProperty = Globals | Color;
  *
  * **Initial value**: `0`
  */
-export type WebkitTextStrokeWidthProperty<TLength = StringHack | 0> = Globals | TLength;
+export type WebkitTextStrokeWidthProperty<TLength = StringHack | number> = Globals | TLength;
 
 /**
  * The `-webkit-touch-callout` CSS property controls the display of the default callout shown when you touch and hold a touch target.
@@ -33930,7 +33930,7 @@ export type AlignmentBaselineProperty =
   | "text-after-edge"
   | "text-before-edge";
 
-export type BaselineShiftProperty<TLength = StringHack | 0> = Globals | TLength | "baseline" | "sub" | "super" | StringHack;
+export type BaselineShiftProperty<TLength = StringHack | number> = Globals | TLength | "baseline" | "sub" | "super" | StringHack;
 
 export type ClipRuleProperty = Globals | "evenodd" | "nonzero";
 
@@ -33983,9 +33983,9 @@ export type StopOpacityProperty = Globals | number;
 
 export type StrokeProperty = Globals | Paint;
 
-export type StrokeDasharrayProperty<TLength = StringHack | 0> = Globals | Dasharray<TLength> | "none";
+export type StrokeDasharrayProperty<TLength = StringHack | number> = Globals | Dasharray<TLength> | "none";
 
-export type StrokeDashoffsetProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type StrokeDashoffsetProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 export type StrokeLinecapProperty = Globals | "butt" | "round" | "square";
 
@@ -33995,7 +33995,7 @@ export type StrokeMiterlimitProperty = Globals | number;
 
 export type StrokeOpacityProperty = Globals | number;
 
-export type StrokeWidthProperty<TLength = StringHack | 0> = Globals | TLength | StringHack;
+export type StrokeWidthProperty<TLength = StringHack | number> = Globals | TLength | StringHack;
 
 export type TextAnchorProperty = Globals | "end" | "middle" | "start";
 
@@ -34051,21 +34051,21 @@ type FontFaceFontVariationSettingsProperty = "normal" | StringHack;
 
 type FontFaceFontWeightProperty = FontWeightAbsolute | StringHack;
 
-type PageBleedProperty<TLength = StringHack | 0> = TLength | "auto";
+type PageBleedProperty<TLength = StringHack | number> = TLength | "auto";
 
 type PageMarksProperty = "crop" | "cross" | "none" | StringHack;
 
-type ViewportHeightProperty<TLength = StringHack | 0> = ViewportLength<TLength> | StringHack;
+type ViewportHeightProperty<TLength = StringHack | number> = ViewportLength<TLength> | StringHack;
 
-type ViewportMaxHeightProperty<TLength = StringHack | 0> = ViewportLength<TLength>;
+type ViewportMaxHeightProperty<TLength = StringHack | number> = ViewportLength<TLength>;
 
-type ViewportMaxWidthProperty<TLength = StringHack | 0> = ViewportLength<TLength>;
+type ViewportMaxWidthProperty<TLength = StringHack | number> = ViewportLength<TLength>;
 
 type ViewportMaxZoomProperty = "auto" | StringHack | number;
 
-type ViewportMinHeightProperty<TLength = StringHack | 0> = ViewportLength<TLength>;
+type ViewportMinHeightProperty<TLength = StringHack | number> = ViewportLength<TLength>;
 
-type ViewportMinWidthProperty<TLength = StringHack | 0> = ViewportLength<TLength>;
+type ViewportMinWidthProperty<TLength = StringHack | number> = ViewportLength<TLength>;
 
 type ViewportMinZoomProperty = "auto" | StringHack | number;
 
@@ -34073,7 +34073,7 @@ type ViewportOrientationProperty = "auto" | "landscape" | "portrait";
 
 type ViewportUserZoomProperty = "-ms-zoom" | "fixed" | "zoom";
 
-type ViewportWidthProperty<TLength = StringHack | 0> = ViewportLength<TLength> | StringHack;
+type ViewportWidthProperty<TLength = StringHack | number> = ViewportLength<TLength> | StringHack;
 
 type ViewportZoomProperty = "auto" | StringHack | number;
 
@@ -34083,9 +34083,9 @@ type AnimateableFeature = "contents" | "scroll-position" | StringHack;
 
 type Attachment = "fixed" | "local" | "scroll";
 
-type BgPosition<TLength = StringHack | 0> = TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
+type BgPosition<TLength = StringHack | number> = TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
 
-type BgSize<TLength = StringHack | 0> = TLength | "auto" | "contain" | "cover" | StringHack;
+type BgSize<TLength = StringHack | number> = TLength | "auto" | "contain" | "cover" | StringHack;
 
 type BlendMode =
   | "color"
@@ -34132,7 +34132,7 @@ type ContentPosition = "center" | "end" | "flex-end" | "flex-start" | "start";
 
 type CubicBezierTimingFunction = "ease" | "ease-in" | "ease-in-out" | "ease-out" | StringHack;
 
-type Dasharray<TLength = StringHack | 0> = TLength | StringHack | number;
+type Dasharray<TLength = StringHack | number> = TLength | StringHack | number;
 
 type DeprecatedSystemColor =
   | "ActiveBorder"
@@ -34186,7 +34186,7 @@ type DisplayOutside = "block" | "inline" | "run-in";
 
 type EastAsianVariantValues = "jis04" | "jis78" | "jis83" | "jis90" | "simplified" | "traditional";
 
-type FinalBgLayer<TLength = StringHack | 0> = Color | BgPosition<TLength> | RepeatStyle | Attachment | Box | "none" | StringHack;
+type FinalBgLayer<TLength = StringHack | number> = Color | BgPosition<TLength> | RepeatStyle | Attachment | Box | "none" | StringHack;
 
 type FontStretchAbsolute =
   | "condensed"
@@ -34210,9 +34210,9 @@ type GridLine = "auto" | StringHack | number;
 
 type LineStyle = "dashed" | "dotted" | "double" | "groove" | "hidden" | "inset" | "none" | "outset" | "ridge" | "solid";
 
-type LineWidth<TLength = StringHack | 0> = TLength | "medium" | "thick" | "thin";
+type LineWidth<TLength = StringHack | number> = TLength | "medium" | "thick" | "thin";
 
-type MaskLayer<TLength = StringHack | 0> = Position<TLength> | RepeatStyle | GeometryBox | CompositingOperator | MaskingMode | "no-clip" | "none" | StringHack;
+type MaskLayer<TLength = StringHack | number> = Position<TLength> | RepeatStyle | GeometryBox | CompositingOperator | MaskingMode | "no-clip" | "none" | StringHack;
 
 type MaskingMode = "alpha" | "luminance" | "match-source";
 
@@ -34369,7 +34369,7 @@ type NamedColor =
 
 type Paint = Color | "child" | "context-fill" | "context-stroke" | "none" | StringHack;
 
-type Position<TLength = StringHack | 0> = TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
+type Position<TLength = StringHack | number> = TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
 
 type Quote = "close-quote" | "no-close-quote" | "no-open-quote" | "open-quote";
 
@@ -34389,6 +34389,6 @@ type SingleTransition = SingleTimingFunction | "all" | "none" | StringHack;
 
 type StepTimingFunction = "step-end" | "step-start" | StringHack;
 
-type TrackBreadth<TLength = StringHack | 0> = TLength | "auto" | "max-content" | "min-content" | StringHack;
+type TrackBreadth<TLength = StringHack | number> = TLength | "auto" | "max-content" | "min-content" | StringHack;
 
-type ViewportLength<TLength = StringHack | 0> = TLength | "auto" | StringHack;
+type ViewportLength<TLength = StringHack | number> = TLength | "auto" | StringHack;

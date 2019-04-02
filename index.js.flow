@@ -1,7 +1,7 @@
 // @flow
 export type StringHack = string;
 
-export type StandardLonghandProperties<TLength = StringHack | 0> = {
+export type StandardLonghandProperties<TLength = StringHack | number> = {
   alignContent?: AlignContentProperty,
   alignItems?: AlignItemsProperty,
   alignSelf?: AlignSelfProperty,
@@ -332,7 +332,7 @@ export type StandardLonghandProperties<TLength = StringHack | 0> = {
   zoom?: ZoomProperty,
 };
 
-export type StandardShorthandProperties<TLength = StringHack | 0> = {
+export type StandardShorthandProperties<TLength = StringHack | number> = {
   all?: Globals,
   animation?: AnimationProperty,
   background?: BackgroundProperty<TLength>,
@@ -379,9 +379,9 @@ export type StandardShorthandProperties<TLength = StringHack | 0> = {
   transition?: TransitionProperty,
 };
 
-export type StandardProperties<TLength = StringHack | 0> = StandardLonghandProperties<TLength> & StandardShorthandProperties<TLength>;
+export type StandardProperties<TLength = StringHack | number> = StandardLonghandProperties<TLength> & StandardShorthandProperties<TLength>;
 
-export type VendorLonghandProperties<TLength = StringHack | 0> = {
+export type VendorLonghandProperties<TLength = StringHack | number> = {
   MozAnimationDelay?: AnimationDelayProperty,
   MozAnimationDirection?: AnimationDirectionProperty,
   MozAnimationDuration?: AnimationDurationProperty,
@@ -597,7 +597,7 @@ export type VendorLonghandProperties<TLength = StringHack | 0> = {
   WebkitWritingMode?: WritingModeProperty,
 };
 
-export type VendorShorthandProperties<TLength = StringHack | 0> = {
+export type VendorShorthandProperties<TLength = StringHack | number> = {
   MozAnimation?: AnimationProperty,
   MozBorderImage?: BorderImageProperty,
   MozColumnRule?: ColumnRuleProperty<TLength>,
@@ -625,9 +625,9 @@ export type VendorShorthandProperties<TLength = StringHack | 0> = {
   WebkitTransition?: TransitionProperty,
 };
 
-export type VendorProperties<TLength = StringHack | 0> = VendorLonghandProperties<TLength> & VendorShorthandProperties<TLength>;
+export type VendorProperties<TLength = StringHack | number> = VendorLonghandProperties<TLength> & VendorShorthandProperties<TLength>;
 
-export type ObsoleteProperties<TLength = StringHack | 0> = {
+export type ObsoleteProperties<TLength = StringHack | number> = {
   boxAlign?: BoxAlignProperty,
   boxDirection?: BoxDirectionProperty,
   boxFlex?: BoxFlexProperty,
@@ -728,7 +728,7 @@ export type ObsoleteProperties<TLength = StringHack | 0> = {
   WebkitScrollSnapPointsY?: ScrollSnapPointsYProperty,
 };
 
-export type SvgProperties<TLength = StringHack | 0> = {
+export type SvgProperties<TLength = StringHack | number> = {
   alignmentBaseline?: AlignmentBaselineProperty,
   baselineShift?: BaselineShiftProperty<TLength>,
   clip?: ClipProperty,
@@ -791,9 +791,9 @@ export type SvgProperties<TLength = StringHack | 0> = {
   writingMode?: WritingModeProperty,
 };
 
-export type Properties<TLength = StringHack | 0> = StandardProperties<TLength> & VendorProperties<TLength> & SvgProperties<TLength>;
+export type Properties<TLength = StringHack | number> = StandardProperties<TLength> & VendorProperties<TLength> & SvgProperties<TLength>;
 
-export type StandardLonghandPropertiesHyphen<TLength = StringHack | 0> = {
+export type StandardLonghandPropertiesHyphen<TLength = StringHack | number> = {
   "align-content"?: AlignContentProperty,
   "align-items"?: AlignItemsProperty,
   "align-self"?: AlignSelfProperty,
@@ -1124,7 +1124,7 @@ export type StandardLonghandPropertiesHyphen<TLength = StringHack | 0> = {
   zoom?: ZoomProperty,
 };
 
-export type StandardShorthandPropertiesHyphen<TLength = StringHack | 0> = {
+export type StandardShorthandPropertiesHyphen<TLength = StringHack | number> = {
   all?: Globals,
   animation?: AnimationProperty,
   background?: BackgroundProperty<TLength>,
@@ -1171,9 +1171,9 @@ export type StandardShorthandPropertiesHyphen<TLength = StringHack | 0> = {
   transition?: TransitionProperty,
 };
 
-export type StandardPropertiesHyphen<TLength = StringHack | 0> = StandardLonghandPropertiesHyphen<TLength> & StandardShorthandPropertiesHyphen<TLength>;
+export type StandardPropertiesHyphen<TLength = StringHack | number> = StandardLonghandPropertiesHyphen<TLength> & StandardShorthandPropertiesHyphen<TLength>;
 
-export type VendorLonghandPropertiesHyphen<TLength = StringHack | 0> = {
+export type VendorLonghandPropertiesHyphen<TLength = StringHack | number> = {
   "-moz-animation-delay"?: AnimationDelayProperty,
   "-moz-animation-direction"?: AnimationDirectionProperty,
   "-moz-animation-duration"?: AnimationDurationProperty,
@@ -1389,7 +1389,7 @@ export type VendorLonghandPropertiesHyphen<TLength = StringHack | 0> = {
   "-webkit-writing-mode"?: WritingModeProperty,
 };
 
-export type VendorShorthandPropertiesHyphen<TLength = StringHack | 0> = {
+export type VendorShorthandPropertiesHyphen<TLength = StringHack | number> = {
   "-moz-animation"?: AnimationProperty,
   "-moz-border-image"?: BorderImageProperty,
   "-moz-column-rule"?: ColumnRuleProperty<TLength>,
@@ -1417,9 +1417,9 @@ export type VendorShorthandPropertiesHyphen<TLength = StringHack | 0> = {
   "-webkit-transition"?: TransitionProperty,
 };
 
-export type VendorPropertiesHyphen<TLength = StringHack | 0> = VendorLonghandPropertiesHyphen<TLength> & VendorShorthandPropertiesHyphen<TLength>;
+export type VendorPropertiesHyphen<TLength = StringHack | number> = VendorLonghandPropertiesHyphen<TLength> & VendorShorthandPropertiesHyphen<TLength>;
 
-export type ObsoletePropertiesHyphen<TLength = StringHack | 0> = {
+export type ObsoletePropertiesHyphen<TLength = StringHack | number> = {
   "box-align"?: BoxAlignProperty,
   "box-direction"?: BoxDirectionProperty,
   "box-flex"?: BoxFlexProperty,
@@ -1520,7 +1520,7 @@ export type ObsoletePropertiesHyphen<TLength = StringHack | 0> = {
   "-webkit-scroll-snap-points-y"?: ScrollSnapPointsYProperty,
 };
 
-export type SvgPropertiesHyphen<TLength = StringHack | 0> = {
+export type SvgPropertiesHyphen<TLength = StringHack | number> = {
   "alignment-baseline"?: AlignmentBaselineProperty,
   "baseline-shift"?: BaselineShiftProperty<TLength>,
   clip?: ClipProperty,
@@ -1583,12 +1583,12 @@ export type SvgPropertiesHyphen<TLength = StringHack | 0> = {
   "writing-mode"?: WritingModeProperty,
 };
 
-export type PropertiesHyphen<TLength = StringHack | 0> = StandardPropertiesHyphen<TLength> &
+export type PropertiesHyphen<TLength = StringHack | number> = StandardPropertiesHyphen<TLength> &
   VendorPropertiesHyphen<TLength> &
   ObsoletePropertiesHyphen<TLength> &
   SvgPropertiesHyphen<TLength>;
 
-export type StandardLonghandPropertiesFallback<TLength = StringHack | 0> = {
+export type StandardLonghandPropertiesFallback<TLength = StringHack | number> = {
   alignContent?: AlignContentProperty | AlignContentProperty[],
   alignItems?: AlignItemsProperty | AlignItemsProperty[],
   alignSelf?: AlignSelfProperty | AlignSelfProperty[],
@@ -1919,7 +1919,7 @@ export type StandardLonghandPropertiesFallback<TLength = StringHack | 0> = {
   zoom?: ZoomProperty | ZoomProperty[],
 };
 
-export type StandardShorthandPropertiesFallback<TLength = StringHack | 0> = {
+export type StandardShorthandPropertiesFallback<TLength = StringHack | number> = {
   all?: Globals | Globals[],
   animation?: AnimationProperty | AnimationProperty[],
   background?: BackgroundProperty<TLength> | BackgroundProperty<TLength>[],
@@ -1966,9 +1966,9 @@ export type StandardShorthandPropertiesFallback<TLength = StringHack | 0> = {
   transition?: TransitionProperty | TransitionProperty[],
 };
 
-export type StandardPropertiesFallback<TLength = StringHack | 0> = StandardLonghandPropertiesFallback<TLength> & StandardShorthandPropertiesFallback<TLength>;
+export type StandardPropertiesFallback<TLength = StringHack | number> = StandardLonghandPropertiesFallback<TLength> & StandardShorthandPropertiesFallback<TLength>;
 
-export type VendorLonghandPropertiesFallback<TLength = StringHack | 0> = {
+export type VendorLonghandPropertiesFallback<TLength = StringHack | number> = {
   MozAnimationDelay?: AnimationDelayProperty | AnimationDelayProperty[],
   MozAnimationDirection?: AnimationDirectionProperty | AnimationDirectionProperty[],
   MozAnimationDuration?: AnimationDurationProperty | AnimationDurationProperty[],
@@ -2184,7 +2184,7 @@ export type VendorLonghandPropertiesFallback<TLength = StringHack | 0> = {
   WebkitWritingMode?: WritingModeProperty | WritingModeProperty[],
 };
 
-export type VendorShorthandPropertiesFallback<TLength = StringHack | 0> = {
+export type VendorShorthandPropertiesFallback<TLength = StringHack | number> = {
   MozAnimation?: AnimationProperty | AnimationProperty[],
   MozBorderImage?: BorderImageProperty | BorderImageProperty[],
   MozColumnRule?: ColumnRuleProperty<TLength> | ColumnRuleProperty<TLength>[],
@@ -2212,9 +2212,9 @@ export type VendorShorthandPropertiesFallback<TLength = StringHack | 0> = {
   WebkitTransition?: TransitionProperty | TransitionProperty[],
 };
 
-export type VendorPropertiesFallback<TLength = StringHack | 0> = VendorLonghandPropertiesFallback<TLength> & VendorShorthandPropertiesFallback<TLength>;
+export type VendorPropertiesFallback<TLength = StringHack | number> = VendorLonghandPropertiesFallback<TLength> & VendorShorthandPropertiesFallback<TLength>;
 
-export type ObsoletePropertiesFallback<TLength = StringHack | 0> = {
+export type ObsoletePropertiesFallback<TLength = StringHack | number> = {
   boxAlign?: BoxAlignProperty | BoxAlignProperty[],
   boxDirection?: BoxDirectionProperty | BoxDirectionProperty[],
   boxFlex?: BoxFlexProperty | BoxFlexProperty[],
@@ -2315,7 +2315,7 @@ export type ObsoletePropertiesFallback<TLength = StringHack | 0> = {
   WebkitScrollSnapPointsY?: ScrollSnapPointsYProperty | ScrollSnapPointsYProperty[],
 };
 
-export type SvgPropertiesFallback<TLength = StringHack | 0> = {
+export type SvgPropertiesFallback<TLength = StringHack | number> = {
   alignmentBaseline?: AlignmentBaselineProperty | AlignmentBaselineProperty[],
   baselineShift?: BaselineShiftProperty<TLength> | BaselineShiftProperty<TLength>[],
   clip?: ClipProperty | ClipProperty[],
@@ -2378,12 +2378,12 @@ export type SvgPropertiesFallback<TLength = StringHack | 0> = {
   writingMode?: WritingModeProperty | WritingModeProperty[],
 };
 
-export type PropertiesFallback<TLength = StringHack | 0> = StandardPropertiesFallback<TLength> &
+export type PropertiesFallback<TLength = StringHack | number> = StandardPropertiesFallback<TLength> &
   VendorPropertiesFallback<TLength> &
   ObsoletePropertiesFallback<TLength> &
   SvgPropertiesFallback<TLength>;
 
-export type StandardLonghandPropertiesHyphenFallback<TLength = StringHack | 0> = {
+export type StandardLonghandPropertiesHyphenFallback<TLength = StringHack | number> = {
   "align-content"?: AlignContentProperty | AlignContentProperty[],
   "align-items"?: AlignItemsProperty | AlignItemsProperty[],
   "align-self"?: AlignSelfProperty | AlignSelfProperty[],
@@ -2714,7 +2714,7 @@ export type StandardLonghandPropertiesHyphenFallback<TLength = StringHack | 0> =
   zoom?: ZoomProperty | ZoomProperty[],
 };
 
-export type StandardShorthandPropertiesHyphenFallback<TLength = StringHack | 0> = {
+export type StandardShorthandPropertiesHyphenFallback<TLength = StringHack | number> = {
   all?: Globals | Globals[],
   animation?: AnimationProperty | AnimationProperty[],
   background?: BackgroundProperty<TLength> | BackgroundProperty<TLength>[],
@@ -2761,9 +2761,10 @@ export type StandardShorthandPropertiesHyphenFallback<TLength = StringHack | 0> 
   transition?: TransitionProperty | TransitionProperty[],
 };
 
-export type StandardPropertiesHyphenFallback<TLength = StringHack | 0> = StandardLonghandPropertiesHyphenFallback<TLength> & StandardShorthandPropertiesHyphenFallback<TLength>;
+export type StandardPropertiesHyphenFallback<TLength = StringHack | number> = StandardLonghandPropertiesHyphenFallback<TLength> &
+  StandardShorthandPropertiesHyphenFallback<TLength>;
 
-export type VendorLonghandPropertiesHyphenFallback<TLength = StringHack | 0> = {
+export type VendorLonghandPropertiesHyphenFallback<TLength = StringHack | number> = {
   "-moz-animation-delay"?: AnimationDelayProperty | AnimationDelayProperty[],
   "-moz-animation-direction"?: AnimationDirectionProperty | AnimationDirectionProperty[],
   "-moz-animation-duration"?: AnimationDurationProperty | AnimationDurationProperty[],
@@ -2979,7 +2980,7 @@ export type VendorLonghandPropertiesHyphenFallback<TLength = StringHack | 0> = {
   "-webkit-writing-mode"?: WritingModeProperty | WritingModeProperty[],
 };
 
-export type VendorShorthandPropertiesHyphenFallback<TLength = StringHack | 0> = {
+export type VendorShorthandPropertiesHyphenFallback<TLength = StringHack | number> = {
   "-moz-animation"?: AnimationProperty | AnimationProperty[],
   "-moz-border-image"?: BorderImageProperty | BorderImageProperty[],
   "-moz-column-rule"?: ColumnRuleProperty<TLength> | ColumnRuleProperty<TLength>[],
@@ -3007,9 +3008,9 @@ export type VendorShorthandPropertiesHyphenFallback<TLength = StringHack | 0> = 
   "-webkit-transition"?: TransitionProperty | TransitionProperty[],
 };
 
-export type VendorPropertiesHyphenFallback<TLength = StringHack | 0> = VendorLonghandPropertiesHyphenFallback<TLength> & VendorShorthandPropertiesHyphenFallback<TLength>;
+export type VendorPropertiesHyphenFallback<TLength = StringHack | number> = VendorLonghandPropertiesHyphenFallback<TLength> & VendorShorthandPropertiesHyphenFallback<TLength>;
 
-export type ObsoletePropertiesHyphenFallback<TLength = StringHack | 0> = {
+export type ObsoletePropertiesHyphenFallback<TLength = StringHack | number> = {
   "box-align"?: BoxAlignProperty | BoxAlignProperty[],
   "box-direction"?: BoxDirectionProperty | BoxDirectionProperty[],
   "box-flex"?: BoxFlexProperty | BoxFlexProperty[],
@@ -3110,7 +3111,7 @@ export type ObsoletePropertiesHyphenFallback<TLength = StringHack | 0> = {
   "-webkit-scroll-snap-points-y"?: ScrollSnapPointsYProperty | ScrollSnapPointsYProperty[],
 };
 
-export type SvgPropertiesHyphenFallback<TLength = StringHack | 0> = {
+export type SvgPropertiesHyphenFallback<TLength = StringHack | number> = {
   "alignment-baseline"?: AlignmentBaselineProperty | AlignmentBaselineProperty[],
   "baseline-shift"?: BaselineShiftProperty<TLength> | BaselineShiftProperty<TLength>[],
   clip?: ClipProperty | ClipProperty[],
@@ -3173,7 +3174,7 @@ export type SvgPropertiesHyphenFallback<TLength = StringHack | 0> = {
   "writing-mode"?: WritingModeProperty | WritingModeProperty[],
 };
 
-export type PropertiesHyphenFallback<TLength = StringHack | 0> = StandardPropertiesHyphenFallback<TLength> &
+export type PropertiesHyphenFallback<TLength = StringHack | number> = StandardPropertiesHyphenFallback<TLength> &
   VendorPropertiesHyphenFallback<TLength> &
   ObsoletePropertiesHyphenFallback<TLength> &
   SvgPropertiesHyphenFallback<TLength>;
@@ -3286,27 +3287,27 @@ export type FontFaceHyphenFallback = {
   "unicode-range"?: string | string[],
 };
 
-export type Page<TLength = StringHack | 0> = {
+export type Page<TLength = StringHack | number> = {
   bleed?: PageBleedProperty<TLength>,
   marks?: PageMarksProperty,
 };
 
-export type PageHyphen<TLength = StringHack | 0> = {
+export type PageHyphen<TLength = StringHack | number> = {
   bleed?: PageBleedProperty<TLength>,
   marks?: PageMarksProperty,
 };
 
-export type PageFallback<TLength = StringHack | 0> = {
+export type PageFallback<TLength = StringHack | number> = {
   bleed?: PageBleedProperty<TLength> | PageBleedProperty<TLength>[],
   marks?: PageMarksProperty | PageMarksProperty[],
 };
 
-export type PageHyphenFallback<TLength = StringHack | 0> = {
+export type PageHyphenFallback<TLength = StringHack | number> = {
   bleed?: PageBleedProperty<TLength> | PageBleedProperty<TLength>[],
   marks?: PageMarksProperty | PageMarksProperty[],
 };
 
-export type Viewport<TLength = StringHack | 0> = {
+export type Viewport<TLength = StringHack | number> = {
   msHeight?: ViewportHeightProperty<TLength>,
   msMaxHeight?: ViewportMaxHeightProperty<TLength>,
   msMaxWidth?: ViewportMaxWidthProperty<TLength>,
@@ -3332,7 +3333,7 @@ export type Viewport<TLength = StringHack | 0> = {
   zoom?: ViewportZoomProperty,
 };
 
-export type ViewportHyphen<TLength = StringHack | 0> = {
+export type ViewportHyphen<TLength = StringHack | number> = {
   "-ms-height"?: ViewportHeightProperty<TLength>,
   "-ms-max-height"?: ViewportMaxHeightProperty<TLength>,
   "-ms-max-width"?: ViewportMaxWidthProperty<TLength>,
@@ -3358,7 +3359,7 @@ export type ViewportHyphen<TLength = StringHack | 0> = {
   zoom?: ViewportZoomProperty,
 };
 
-export type ViewportFallback<TLength = StringHack | 0> = {
+export type ViewportFallback<TLength = StringHack | number> = {
   msHeight?: ViewportHeightProperty<TLength> | ViewportHeightProperty<TLength>[],
   msMaxHeight?: ViewportMaxHeightProperty<TLength> | ViewportMaxHeightProperty<TLength>[],
   msMaxWidth?: ViewportMaxWidthProperty<TLength> | ViewportMaxWidthProperty<TLength>[],
@@ -3384,7 +3385,7 @@ export type ViewportFallback<TLength = StringHack | 0> = {
   zoom?: ViewportZoomProperty | ViewportZoomProperty[],
 };
 
-export type ViewportHyphenFallback<TLength = StringHack | 0> = {
+export type ViewportHyphenFallback<TLength = StringHack | number> = {
   "-ms-height"?: ViewportHeightProperty<TLength> | ViewportHeightProperty<TLength>[],
   "-ms-max-height"?: ViewportMaxHeightProperty<TLength> | ViewportMaxHeightProperty<TLength>[],
   "-ms-max-width"?: ViewportMaxWidthProperty<TLength> | ViewportMaxWidthProperty<TLength>[],

@@ -146,7 +146,7 @@ declarations.set(declarableGlobalsAndNumber, globalsAndNumberDeclaration);
 
 export const lengthGeneric: IGenerics = {
   name: 'TLength',
-  defaults: 'StringHack | 0',
+  defaults: 'StringHack | number',
 };
 
 const standardLonghandPropertiesDefinition: IPropertyAlias[] = [];
