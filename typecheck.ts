@@ -1,6 +1,6 @@
 // tslint:disable no-unused-expression
 
-import * as CSS from './';
+import * as CSS from './dist';
 
 const css: CSS.Properties = {
   flexGrow: 1,

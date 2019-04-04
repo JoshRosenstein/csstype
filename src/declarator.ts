@@ -146,7 +146,7 @@ declarations.set(declarableGlobalsAndNumber, globalsAndNumberDeclaration);
 
 export const lengthGeneric: IGenerics = {
   name: 'TLength',
-  defaults: 'string | 0',
+  defaults: 'StringHack | number',
 };
 
 const standardLonghandPropertiesDefinition: IPropertyAlias[] = [];
@@ -164,7 +164,7 @@ const svgPropertiesHyphenDefinition: IPropertyAlias[] = [];
 
 const PROPERTY = 'Property';
 
-function toPropertyDeclarationName(name: string) {
+export function toPropertyDeclarationName(name: string) {
   return toPascalCase(name) + PROPERTY;
 }
 
@@ -217,10 +217,6 @@ for (const properties of [htmlProperties, svgProperties]) {
     if (!declaration) {
       if (property.types.length === 0) {
         declaration = globalsDeclaration;
-      } else if (onlyContainsString(property.types)) {
-        declaration = globalsAndStringDeclaration;
-      } else if (onlyContainsNumber(property.types)) {
-        declaration = globalsAndNumberDeclaration;
       } else {
         const declarationName = toPropertyDeclarationName(property.name);
 
@@ -289,7 +285,7 @@ for (const name of Object.keys(atRules.rules).sort()) {
       if (!declaration) {
         declaration = {
           name: toPascalCase(name) + toPropertyDeclarationName(descriptor.name),
-          export: false,
+          export: true,
           types: declarable(types),
           generics,
         };
@@ -318,7 +314,7 @@ for (const name of Object.keys(dataTypes).sort()) {
   const declarableDataType = declarable(dataTypes[name]);
   declarations.set(declarableDataType, {
     name: toPascalCase(name),
-    export: false,
+    export: true,
     types: declarableDataType,
     generics: lengthIn(dataTypes[name]) ? [lengthGeneric] : [],
   });
@@ -465,7 +461,7 @@ const allPropertiesInterface: Interface = {
   extends: [
     standardPropertiesInterface,
     vendorPropertiesInterface,
-    obsoletePropertiesInterface,
+    //  obsoletePropertiesInterface,
     svgPropertiesInterface,
   ],
   fallback: false,

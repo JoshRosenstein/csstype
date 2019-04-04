@@ -1,16 +1,32 @@
 import { spawn, SpawnOptions } from 'child_process';
 import { writeFile } from 'fs';
 import { get, RequestOptions } from 'https';
+import { join } from 'path';
 import { createInterface } from 'readline';
-
 export const ROOT_DIR = __dirname;
 export const TYPESCRIPT_FILENAME = 'index.d.ts';
+export const OUTPUT_FOLDERNAME = 'dist';
+
+export const TYPESCRIPT_FILENAME2 = join(ROOT_DIR, OUTPUT_FOLDERNAME, 'index.d.ts');
 export const FLOW_FILENAME = 'index.js.flow';
 
 export function writeFileAsync(filename: string, content: string) {
   return new Promise((resolve, reject) => {
     writeFile(filename, content, 'utf-8', error => {
       if (error) {
+        reject(error);
+      } else {
+        resolve();
+      }
+    });
+  });
+}
+
+export function writeFileAsynctoFolder(filename: string, content: string) {
+  return new Promise((resolve, reject) => {
+    writeFile(join(process.cwd(), OUTPUT_FOLDERNAME, filename), content, 'utf-8', error => {
+      if (error) {
+        console.info(error);
         reject(error);
       } else {
         resolve();
