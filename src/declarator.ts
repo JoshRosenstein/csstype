@@ -285,7 +285,7 @@ for (const name of Object.keys(atRules.rules).sort()) {
       if (!declaration) {
         declaration = {
           name: toPascalCase(name) + toPropertyDeclarationName(descriptor.name),
-          export: false,
+          export: true,
           types: declarable(types),
           generics,
         };
@@ -314,7 +314,7 @@ for (const name of Object.keys(dataTypes).sort()) {
   const declarableDataType = declarable(dataTypes[name]);
   declarations.set(declarableDataType, {
     name: toPascalCase(name),
-    export: false,
+    export: true,
     types: declarableDataType,
     generics: lengthIn(dataTypes[name]) ? [lengthGeneric] : [],
   });

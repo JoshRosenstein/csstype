@@ -34001,21 +34001,21 @@ export type TextAnchorProperty = Globals | "end" | "middle" | "start";
 
 export type VectorEffectProperty = Globals | "non-scaling-stroke" | "none";
 
-type CounterStyleRangeProperty = "auto" | "infinite" | StringHack | number;
+export type CounterStyleRangeProperty = "auto" | "infinite" | StringHack | number;
 
-type CounterStyleSpeakAsProperty = "auto" | "bullets" | "numbers" | "spell-out" | "words" | StringHack;
+export type CounterStyleSpeakAsProperty = "auto" | "bullets" | "numbers" | "spell-out" | "words" | StringHack;
 
-type CounterStyleSystemProperty = "additive" | "alphabetic" | "cyclic" | "fixed" | "numeric" | "symbolic" | StringHack;
+export type CounterStyleSystemProperty = "additive" | "alphabetic" | "cyclic" | "fixed" | "numeric" | "symbolic" | StringHack;
 
-type FontFaceFontFeatureSettingsProperty = "normal" | StringHack;
+export type FontFaceFontFeatureSettingsProperty = "normal" | StringHack;
 
-type FontFaceFontDisplayProperty = "auto" | "block" | "fallback" | "optional" | "swap";
+export type FontFaceFontDisplayProperty = "auto" | "block" | "fallback" | "optional" | "swap";
 
-type FontFaceFontStretchProperty = FontStretchAbsolute | StringHack;
+export type FontFaceFontStretchProperty = FontStretchAbsolute | StringHack;
 
-type FontFaceFontStyleProperty = "italic" | "normal" | "oblique" | StringHack;
+export type FontFaceFontStyleProperty = "italic" | "normal" | "oblique" | StringHack;
 
-type FontFaceFontVariantProperty =
+export type FontFaceFontVariantProperty =
   | EastAsianVariantValues
   | "all-petite-caps"
   | "all-small-caps"
@@ -34047,47 +34047,47 @@ type FontFaceFontVariantProperty =
   | "unicase"
   | StringHack;
 
-type FontFaceFontVariationSettingsProperty = "normal" | StringHack;
+export type FontFaceFontVariationSettingsProperty = "normal" | StringHack;
 
-type FontFaceFontWeightProperty = FontWeightAbsolute | StringHack;
+export type FontFaceFontWeightProperty = FontWeightAbsolute | StringHack;
 
-type PageBleedProperty<TLength = StringHack | number> = TLength | "auto";
+export type PageBleedProperty<TLength = StringHack | number> = TLength | "auto";
 
-type PageMarksProperty = "crop" | "cross" | "none" | StringHack;
+export type PageMarksProperty = "crop" | "cross" | "none" | StringHack;
 
-type ViewportHeightProperty<TLength = StringHack | number> = ViewportLength<TLength> | StringHack;
+export type ViewportHeightProperty<TLength = StringHack | number> = ViewportLength<TLength> | StringHack;
 
-type ViewportMaxHeightProperty<TLength = StringHack | number> = ViewportLength<TLength>;
+export type ViewportMaxHeightProperty<TLength = StringHack | number> = ViewportLength<TLength>;
 
-type ViewportMaxWidthProperty<TLength = StringHack | number> = ViewportLength<TLength>;
+export type ViewportMaxWidthProperty<TLength = StringHack | number> = ViewportLength<TLength>;
 
-type ViewportMaxZoomProperty = "auto" | StringHack | number;
+export type ViewportMaxZoomProperty = "auto" | StringHack | number;
 
-type ViewportMinHeightProperty<TLength = StringHack | number> = ViewportLength<TLength>;
+export type ViewportMinHeightProperty<TLength = StringHack | number> = ViewportLength<TLength>;
 
-type ViewportMinWidthProperty<TLength = StringHack | number> = ViewportLength<TLength>;
+export type ViewportMinWidthProperty<TLength = StringHack | number> = ViewportLength<TLength>;
 
-type ViewportMinZoomProperty = "auto" | StringHack | number;
+export type ViewportMinZoomProperty = "auto" | StringHack | number;
 
-type ViewportOrientationProperty = "auto" | "landscape" | "portrait";
+export type ViewportOrientationProperty = "auto" | "landscape" | "portrait";
 
-type ViewportUserZoomProperty = "-ms-zoom" | "fixed" | "zoom";
+export type ViewportUserZoomProperty = "-ms-zoom" | "fixed" | "zoom";
 
-type ViewportWidthProperty<TLength = StringHack | number> = ViewportLength<TLength> | StringHack;
+export type ViewportWidthProperty<TLength = StringHack | number> = ViewportLength<TLength> | StringHack;
 
-type ViewportZoomProperty = "auto" | StringHack | number;
+export type ViewportZoomProperty = "auto" | StringHack | number;
 
-type AbsoluteSize = "large" | "medium" | "small" | "x-large" | "x-small" | "xx-large" | "xx-small";
+export type AbsoluteSize = "large" | "medium" | "small" | "x-large" | "x-small" | "xx-large" | "xx-small";
 
-type AnimateableFeature = "contents" | "scroll-position" | StringHack;
+export type AnimateableFeature = "contents" | "scroll-position" | StringHack;
 
-type Attachment = "fixed" | "local" | "scroll";
+export type Attachment = "fixed" | "local" | "scroll";
 
-type BgPosition<TLength = StringHack | number> = TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
+export type BgPosition<TLength = StringHack | number> = TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
 
-type BgSize<TLength = StringHack | number> = TLength | "auto" | "contain" | "cover" | StringHack;
+export type BgSize<TLength = StringHack | number> = TLength | "auto" | "contain" | "cover" | StringHack;
 
-type BlendMode =
+export type BlendMode =
   | "color"
   | "color-burn"
   | "color-dodge"
@@ -34105,11 +34105,11 @@ type BlendMode =
   | "screen"
   | "soft-light";
 
-type Box = "border-box" | "content-box" | "padding-box";
+export type Box = "border-box" | "content-box" | "padding-box";
 
-type Color = NamedColor | DeprecatedSystemColor | "currentcolor" | StringHack;
+export type Color = NamedColor | DeprecatedSystemColor | "currentcolor" | StringHack;
 
-type CompositeStyle =
+export type CompositeStyle =
   | "clear"
   | "copy"
   | "destination-atop"
@@ -34122,19 +34122,19 @@ type CompositeStyle =
   | "source-over"
   | "xor";
 
-type CompositingOperator = "add" | "exclude" | "intersect" | "subtract";
+export type CompositingOperator = "add" | "exclude" | "intersect" | "subtract";
 
-type ContentDistribution = "space-around" | "space-between" | "space-evenly" | "stretch";
+export type ContentDistribution = "space-around" | "space-between" | "space-evenly" | "stretch";
 
-type ContentList = Quote | "contents" | StringHack;
+export type ContentList = Quote | "contents" | StringHack;
 
-type ContentPosition = "center" | "end" | "flex-end" | "flex-start" | "start";
+export type ContentPosition = "center" | "end" | "flex-end" | "flex-start" | "start";
 
-type CubicBezierTimingFunction = "ease" | "ease-in" | "ease-in-out" | "ease-out" | StringHack;
+export type CubicBezierTimingFunction = "ease" | "ease-in" | "ease-in-out" | "ease-out" | StringHack;
 
-type Dasharray<TLength = StringHack | number> = TLength | StringHack | number;
+export type Dasharray<TLength = StringHack | number> = TLength | StringHack | number;
 
-type DeprecatedSystemColor =
+export type DeprecatedSystemColor =
   | "ActiveBorder"
   | "ActiveCaption"
   | "AppWorkspace"
@@ -34164,9 +34164,9 @@ type DeprecatedSystemColor =
   | "WindowFrame"
   | "WindowText";
 
-type DisplayInside = "-ms-flexbox" | "-ms-grid" | "-webkit-flex" | "flex" | "flow" | "flow-root" | "grid" | "ruby" | "table";
+export type DisplayInside = "-ms-flexbox" | "-ms-grid" | "-webkit-flex" | "flex" | "flow" | "flow-root" | "grid" | "ruby" | "table";
 
-type DisplayInternal =
+export type DisplayInternal =
   | "ruby-base"
   | "ruby-base-container"
   | "ruby-text"
@@ -34180,15 +34180,15 @@ type DisplayInternal =
   | "table-row"
   | "table-row-group";
 
-type DisplayLegacy = "-ms-inline-flexbox" | "-ms-inline-grid" | "-webkit-inline-flex" | "inline-block" | "inline-flex" | "inline-grid" | "inline-list-item" | "inline-table";
+export type DisplayLegacy = "-ms-inline-flexbox" | "-ms-inline-grid" | "-webkit-inline-flex" | "inline-block" | "inline-flex" | "inline-grid" | "inline-list-item" | "inline-table";
 
-type DisplayOutside = "block" | "inline" | "run-in";
+export type DisplayOutside = "block" | "inline" | "run-in";
 
-type EastAsianVariantValues = "jis04" | "jis78" | "jis83" | "jis90" | "simplified" | "traditional";
+export type EastAsianVariantValues = "jis04" | "jis78" | "jis83" | "jis90" | "simplified" | "traditional";
 
-type FinalBgLayer<TLength = StringHack | number> = Color | BgPosition<TLength> | RepeatStyle | Attachment | Box | "none" | StringHack;
+export type FinalBgLayer<TLength = StringHack | number> = Color | BgPosition<TLength> | RepeatStyle | Attachment | Box | "none" | StringHack;
 
-type FontStretchAbsolute =
+export type FontStretchAbsolute =
   | "condensed"
   | "expanded"
   | "extra-condensed"
@@ -34200,23 +34200,23 @@ type FontStretchAbsolute =
   | "ultra-expanded"
   | StringHack;
 
-type FontWeightAbsolute = "bold" | "normal" | number;
+export type FontWeightAbsolute = "bold" | "normal" | number;
 
-type GenericFamily = "cursive" | "fantasy" | "monospace" | "sans-serif" | "serif";
+export type GenericFamily = "cursive" | "fantasy" | "monospace" | "sans-serif" | "serif";
 
-type GeometryBox = Box | "fill-box" | "margin-box" | "stroke-box" | "view-box";
+export type GeometryBox = Box | "fill-box" | "margin-box" | "stroke-box" | "view-box";
 
-type GridLine = "auto" | StringHack | number;
+export type GridLine = "auto" | StringHack | number;
 
-type LineStyle = "dashed" | "dotted" | "double" | "groove" | "hidden" | "inset" | "none" | "outset" | "ridge" | "solid";
+export type LineStyle = "dashed" | "dotted" | "double" | "groove" | "hidden" | "inset" | "none" | "outset" | "ridge" | "solid";
 
-type LineWidth<TLength = StringHack | number> = TLength | "medium" | "thick" | "thin";
+export type LineWidth<TLength = StringHack | number> = TLength | "medium" | "thick" | "thin";
 
-type MaskLayer<TLength = StringHack | number> = Position<TLength> | RepeatStyle | GeometryBox | CompositingOperator | MaskingMode | "no-clip" | "none" | StringHack;
+export type MaskLayer<TLength = StringHack | number> = Position<TLength> | RepeatStyle | GeometryBox | CompositingOperator | MaskingMode | "no-clip" | "none" | StringHack;
 
-type MaskingMode = "alpha" | "luminance" | "match-source";
+export type MaskingMode = "alpha" | "luminance" | "match-source";
 
-type NamedColor =
+export type NamedColor =
   | "aliceblue"
   | "antiquewhite"
   | "aqua"
@@ -34367,28 +34367,28 @@ type NamedColor =
   | "yellow"
   | "yellowgreen";
 
-type Paint = Color | "child" | "context-fill" | "context-stroke" | "none" | StringHack;
+export type Paint = Color | "child" | "context-fill" | "context-stroke" | "none" | StringHack;
 
-type Position<TLength = StringHack | number> = TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
+export type Position<TLength = StringHack | number> = TLength | "bottom" | "center" | "left" | "right" | "top" | StringHack;
 
-type Quote = "close-quote" | "no-close-quote" | "no-open-quote" | "open-quote";
+export type Quote = "close-quote" | "no-close-quote" | "no-open-quote" | "open-quote";
 
-type RepeatStyle = "no-repeat" | "repeat" | "repeat-x" | "repeat-y" | "round" | "space" | StringHack;
+export type RepeatStyle = "no-repeat" | "repeat" | "repeat-x" | "repeat-y" | "round" | "space" | StringHack;
 
-type SelfPosition = "center" | "end" | "flex-end" | "flex-start" | "self-end" | "self-start" | "start";
+export type SelfPosition = "center" | "end" | "flex-end" | "flex-start" | "self-end" | "self-start" | "start";
 
-type SingleAnimation = SingleTimingFunction | SingleAnimationDirection | SingleAnimationFillMode | "infinite" | "none" | "paused" | "running" | StringHack | number;
+export type SingleAnimation = SingleTimingFunction | SingleAnimationDirection | SingleAnimationFillMode | "infinite" | "none" | "paused" | "running" | StringHack | number;
 
-type SingleAnimationDirection = "alternate" | "alternate-reverse" | "normal" | "reverse";
+export type SingleAnimationDirection = "alternate" | "alternate-reverse" | "normal" | "reverse";
 
-type SingleAnimationFillMode = "backwards" | "both" | "forwards" | "none";
+export type SingleAnimationFillMode = "backwards" | "both" | "forwards" | "none";
 
-type SingleTimingFunction = CubicBezierTimingFunction | StepTimingFunction | "linear" | StringHack;
+export type SingleTimingFunction = CubicBezierTimingFunction | StepTimingFunction | "linear" | StringHack;
 
-type SingleTransition = SingleTimingFunction | "all" | "none" | StringHack;
+export type SingleTransition = SingleTimingFunction | "all" | "none" | StringHack;
 
-type StepTimingFunction = "step-end" | "step-start" | StringHack;
+export type StepTimingFunction = "step-end" | "step-start" | StringHack;
 
-type TrackBreadth<TLength = StringHack | number> = TLength | "auto" | "max-content" | "min-content" | StringHack;
+export type TrackBreadth<TLength = StringHack | number> = TLength | "auto" | "max-content" | "min-content" | StringHack;
 
-type ViewportLength<TLength = StringHack | number> = TLength | "auto" | StringHack;
+export type ViewportLength<TLength = StringHack | number> = TLength | "auto" | StringHack;
