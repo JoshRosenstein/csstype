@@ -2,7 +2,7 @@
   "name": "@roseys/csstype",
   "version": "2.6.9",
   "main": "",
-  "types": "dist/index.d.ts",
+  "types": "index.d.ts",
   "description": "Strict TypeScript and Flow types for style based on MDN data",
   "repository": "https://github.com/frenic/csstype",
   "author": "Fredrik Nicol <fredrik.nicol@gmail.com>",
@@ -39,11 +39,12 @@
     "lazy": "tsc && npm run lint && npm run pretty",
     "test": "jest --no-cache",
     "typecheck": "tsc typecheck.ts --noEmit --pretty & flow check typecheck.js",
-    "prepublish": "tsc && npm run test && npm run build:files && npm run typecheck",
+    "prepublish": "tsc && npm run test && npm run build && npm run typecheck",
     "rebase-build": "git rebase --exec \"yarn --ignore-scripts && yarn build && git commit -a --amend --no-verify --no-edit --allow-empty\""
   },
   "files": [
-    "dist"
+    "index.d.ts",
+    "index.js.flow"
   ],
   "keywords": [
     "css",
