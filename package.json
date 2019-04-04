@@ -2,7 +2,7 @@
   "name": "@roseys/csstype",
   "version": "2.6.8",
   "main": "",
-  "types": "out/index.d.ts",
+  "types": "dist/index.d.ts",
   "description": "Strict TypeScript and Flow types for style based on MDN data",
   "repository": "https://github.com/frenic/csstype",
   "author": "Fredrik Nicol <fredrik.nicol@gmail.com>",
@@ -43,7 +43,7 @@
     "rebase-build": "git rebase --exec \"yarn --ignore-scripts && yarn build && git commit -a --amend --no-verify --no-edit --allow-empty\""
   },
   "files": [
-    "dist*/"
+    "dist"
   ],
   "keywords": [
     "css",
